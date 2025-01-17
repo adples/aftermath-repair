@@ -214,6 +214,17 @@ function acf_should_wrap_innerblocks( $wrap, $name ) {
 	return false;
 }
 
+/**
+ * Add CTA to end of nav.
+ */
+function add_cta_to_nav( $items, $args ) {
+	 if ($args->theme_location == 'primary') {
+		 $url = get_permalink(32);
+		 $items .= '<li class="nav-item ms-lg-auto"><a class="nav-link nav-btn btn btn-primary" href="'.$url.'">Schedule a Free Evaluation</a></li>';
+	 }
+	 return $items;
+ }
+ add_filter( 'wp_nav_menu_items', 'add_cta_to_nav', 10, 2 );
 
 /**
  * Gravity Forms - change default button
