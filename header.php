@@ -35,7 +35,7 @@ $navbar_type       = get_theme_mod( 'understrap_navbar_type', 'collapse' );
 							<?php $phone = str_replace(array('.'), '' , get_field('phone','option')) ?>
 							<li>
 								<a href="<?php echo 'tel:'.$phone ?>">
-								<span><i class="fa fa-phone"></i></span>
+								<span class="d-inline-block me-2"><i class="fa fa-phone"></i></span>
 								<?php echo get_field('phone','option') ?>
 								</a>
 							</li>
@@ -45,7 +45,7 @@ $navbar_type       = get_theme_mod( 'understrap_navbar_type', 'collapse' );
 							<?php $email = get_field('email','option') ?>
 							<li>
 								<a href="<?php echo 'mailto:'.$email ?>">
-									<span><i class="fa fa-envelope"></i></span>
+									<span class="d-inline-block me-2"><i class="fa fa-envelope"></i></span>
 									<?php echo get_field('email','option') ?>
 								</a>
 							</li>

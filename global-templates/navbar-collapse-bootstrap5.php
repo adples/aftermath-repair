@@ -21,35 +21,37 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 	<div class="<?php echo esc_attr( $container ); ?>">
 		<!-- Your site branding in the menu -->
-		<?php get_template_part( 'global-templates/navbar-branding' ); ?>
-
-		<button
-			class="navbar-toggler"
-			type="button"
-			data-bs-toggle="collapse"
-			data-bs-target="#navbarNavDropdown"
-			aria-controls="navbarNavDropdown"
-			aria-expanded="false"
-			aria-label="<?php esc_attr_e( 'Toggle navigation', 'understrap' ); ?>"
-		>
-			<i class="fa fa-bars"></i>
-		</button>
-
-		<!-- The WordPress Menu goes here -->
-		<?php
-		wp_nav_menu(
-			array(
-				'theme_location'  => 'primary',
-				'container_class' => 'collapse navbar-collapse',
-				'container_id'    => 'navbarNavDropdown',
-				'menu_class'      => 'navbar-nav',
-				'fallback_cb'     => '',
-				'menu_id'         => 'main-menu',
-				'depth'           => 2,
-				'walker'          => new Understrap_WP_Bootstrap_Navwalker(),
-			)
-		);
-		?>
+		<div class="navbar-inner">
+			<?php get_template_part( 'global-templates/navbar-branding' ); ?>
+			
+			<button
+				class="navbar-toggler"
+				type="button"
+				data-bs-toggle="collapse"
+				data-bs-target="#navbarNavDropdown"
+				aria-controls="navbarNavDropdown"
+				aria-expanded="false"
+				aria-label="<?php esc_attr_e( 'Toggle navigation', 'understrap' ); ?>"
+			>
+				<i class="fa fa-bars"></i>
+			</button>
+			
+			<!-- The WordPress Menu goes here -->
+			<?php
+			wp_nav_menu(
+				array(
+					'theme_location'  => 'primary',
+					'container_class' => 'collapse navbar-collapse',
+					'container_id'    => 'navbarNavDropdown',
+					'menu_class'      => 'navbar-nav',
+					'fallback_cb'     => '',
+					'menu_id'         => 'main-menu',
+					'depth'           => 2,
+					'walker'          => new Understrap_WP_Bootstrap_Navwalker(),
+				)
+			);
+			?>
+		</div>
 	</div><!-- .container(-fluid) -->
 
 </nav><!-- #main-nav -->
