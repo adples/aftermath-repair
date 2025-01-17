@@ -43,7 +43,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 					$the_query = new WP_Query( array(
 						'post_type' => 'cities',
 						'posts_per_page' => 100, 
-						'order'   => ASC,
+						'order' => 'ASC'
 					  )
 					);
 					?>
