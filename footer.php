@@ -20,7 +20,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 	<div class="footer-inner">
 		<div class="container">
 			<div class="row">
-				<div class="col-lg-10 col-xl-8 col-xxl-3">
+				<div class="col-lg-10 col-xl-8 col-xxl-4">
 					<div class="footer-logo mb-4">
 						<?php the_custom_logo(); ?>
 					</div>
@@ -94,7 +94,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 						<?php endwhile; wp_reset_postdata(); ?>
 					</ul>
 				</div>
-				<div class="col-lg-4 col-xxl-3">
+				<div class="col-lg-4 col-xxl-2">
 					<h6 class="h5">Get In Touch</h6>
 					
 					<ul class="footer-list-icon fa-ul">
