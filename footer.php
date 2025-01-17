@@ -19,7 +19,40 @@ $container = get_theme_mod( 'understrap_container_type' );
 <div class="footer" id="wrapper-footer">
 	<div class="footer-inner">
 		<div class="container">
-			<div class="row gx-xxl-5 justify-content-between">
+			<div class="row">
+				<div class="col-lg-10 col-xl-8 col-xxl-3">
+					<div class="footer-logo mx-auto mx-lg-0">
+						<?php the_custom_logo(); ?>
+					</div>
+					
+					<?php if( get_field('desc','option') ): ?>
+						<div class="company-description">
+							<?php echo get_field('desc.','option') ?>
+						</div>
+					<?php endif ?>
+					
+					<div class="copyright">
+						<span>&copy; <?php echo date("Y").' '.get_bloginfo().' All Rights Reserved.'; ?></span>
+					</div>
+				</div>
+				<div class="col-lg-4 col-xxl-3">
+					<h6>Areas We Serve</h6>
+					
+					<?php if( have_rows('states','option') ): ?>
+						<h6>We also serve several other states outside of Texas including:</h6>
+						<ul>
+							<?php while( have_rows('states','option') ): the_row(); ?>
+								<?php if( get_sub_field('state') ): ?>
+									<li><?php echo get_sub_field('state'); ?></li>
+								<?php endif; ?>
+							<?php endwhile; ?>
+						</ul>
+					<?php endif; ?>
+				</div>
+				<div class="col-lg-4 col-xxl-3">
+				</div>
+				<div class="col-lg-4 col-xxl-3">
+				</div>
 				<div class="col-md-4 col-lg-4 order-md-2 col-xl-3 mb-4 mb-lg-0">
 					<h6 class="h5">Contact Us</h6>
 					<ul class="footer-list fa-ul">
