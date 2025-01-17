@@ -30,7 +30,7 @@ $navbar_type       = get_theme_mod( 'understrap_navbar_type', 'collapse' );
 		<div class="container">
 			<div class="row">
 				<div class="col-md-8">
-					<ul>
+					<ul class="topbar-list-contact">
 						<?php if( get_field('phone','option') ): ?>
 							<?php $phone = str_replace(array('.'), '' , get_field('phone','option')) ?>
 							<li>
@@ -54,7 +54,7 @@ $navbar_type       = get_theme_mod( 'understrap_navbar_type', 'collapse' );
 				</div>
 				<div class="col-md-4">
 					<?php if( have_rows('social','option') ): ?>
-						<ul>
+						<ul class="topbar-list-social">
 							<?php while( have_rows('social','option') ): the_row(); ?>
 								<?php if( get_sub_field('icon') && get_sub_field('url') ): ?>
 									<li>

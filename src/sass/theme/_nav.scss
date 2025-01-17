@@ -1,3 +1,45 @@
+.topbar{
+	padding: .25rem 0;
+	background-color: $secondary;
+	
+	@include media-breakpoint-up(xl){
+		padding: .5rem 0;
+	}
+	
+	.topbar-list-contact,
+	.topbar-list-social{
+		@include list-unstyled();
+		
+		@include media-breakpoint-up(md){
+			display: flex;
+		}
+		
+		li{
+			a{
+				color: $white;
+			}
+		}
+	}
+	
+	.topbar-list-contact{
+		@include media-breakpoint-up(md){
+			flex-direction: row;
+		}
+		
+		li{
+			@include media-breakpoint-up(md){
+				margin-right: 2rem;
+			}
+		}
+	}
+	
+	.topbar-list-social{
+		@include media-breakpoint-up(md){
+			flex-direction: row-reverse;
+		}
+	}
+}
+
 #main-nav{
 	position: static;
 	width: 100%;
