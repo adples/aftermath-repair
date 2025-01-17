@@ -21,22 +21,22 @@ $container = get_theme_mod( 'understrap_container_type' );
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-10 col-xl-8 col-xxl-3">
-					<div class="footer-logo mx-auto mx-lg-0">
+					<div class="footer-logo mb-4">
 						<?php the_custom_logo(); ?>
 					</div>
 					
 					<?php if( get_field('desc','option') ): ?>
-						<div class="company-description">
+						<div class="footer-description">
 							<?php echo get_field('desc','option') ?>
 						</div>
 					<?php endif ?>
 					
-					<div class="copyright">
+					<div class="footer-copyright">
 						<span>&copy; <?php echo date("Y").' '.get_bloginfo().' All Rights Reserved.'; ?></span>
 					</div>
 				</div>
 				<div class="col-lg-4 col-xxl-3">
-					<h6>Areas We Serve</h6>
+					<h6 class="h5">Areas We Serve</h6>
 					
 					<?php
 					$the_query = new WP_Query( array(
@@ -47,20 +47,21 @@ $container = get_theme_mod( 'understrap_container_type' );
 					);
 					?>
 					
-					<ul>
+					<h6>Texas</h6>
+					<ul class="footer-list-inline">
 						<?php
 						while ( $the_query->have_posts() ) :
 							$the_query->the_post();
 							$id = get_the_ID();
 						?>
-							<li id="<?php echo $id ?>"><?php echo get_the_title() ?></li>	
+							<li id="<?php echo $id ?>"><a href="<?php echo esc_url(get_the_permalink()) ?>"><?php echo get_the_title() ?></a></li>	
 					
 						<?php endwhile; wp_reset_postdata(); ?>
 					</ul>
 					
 					<?php if( have_rows('states','option') ): ?>
 						<h6>We also serve several other states outside of Texas including:</h6>
-						<ul>
+						<ul class="footer-list-inline">
 							<?php while( have_rows('states','option') ): the_row(); ?>
 								<?php if( get_sub_field('state') ): ?>
 									<li><?php echo get_sub_field('state'); ?></li>
@@ -70,7 +71,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 					<?php endif; ?>
 				</div>
 				<div class="col-lg-4 col-xxl-3">
-					<h6>Foundation Repair Services</h6>
+					<h6 class="h5">Foundation Repair Services</h6>
 					
 					<?php
 					$the_query = new WP_Query( array(
@@ -82,7 +83,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 					);
 					?>
 					
-					<ul>
+					<ul class="footer-list">
 						<?php
 						while ( $the_query->have_posts() ) :
 							$the_query->the_post();
@@ -94,9 +95,9 @@ $container = get_theme_mod( 'understrap_container_type' );
 					</ul>
 				</div>
 				<div class="col-lg-4 col-xxl-3">
-					<h6>Get In Touch</h6>
+					<h6 class="h5">Get In Touch</h6>
 					
-					<ul>
+					<ul class="footer-list-icon fa-ul">
 						<?php if( get_field('phone','option') ): ?>
 							<?php $phone = str_replace(array('.'), '' , get_field('phone','option')) ?>
 							<li>
@@ -122,8 +123,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 								<?php if( get_sub_field('icon') && get_sub_field('url') ): ?>
 									<li>
 										<a href="<?php echo esc_url(get_sub_field('url')) ?>">
-											<span><i class="fa fa-envelope"></i></span>
-											<?php echo get_sub_field('icon') ?>
+											<span><?php echo get_sub_field('icon') ?></span>
 											<?php echo get_sub_field('platform') ?>
 										</a>
 									</li>
