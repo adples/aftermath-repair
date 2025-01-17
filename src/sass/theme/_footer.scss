@@ -2,7 +2,7 @@
 	position: relative;
 	font-size: .875rem;
 	color: $white;
-	background-color: $primary;
+	background-color: $secondary;
 	
 	.footer-inner{
 		
@@ -51,7 +51,6 @@
 	
 	.footer-logo{
 		max-width: 275px;
-		filter: brightness(0) invert(1);
 		
 		@include media-breakpoint-up(lg){
 		}

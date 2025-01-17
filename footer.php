@@ -38,6 +38,27 @@ $container = get_theme_mod( 'understrap_container_type' );
 				<div class="col-lg-4 col-xxl-3">
 					<h6>Areas We Serve</h6>
 					
+					<?php
+					
+					$the_query = new WP_Query( array(
+						'post_type' => 'cities',
+						'posts_per_page' => 100, 
+						'order'   => ASC,
+					  )
+					) );
+					?>
+					
+					<ul>
+						<?php
+						while ( $the_query->have_posts() ) :
+						$the_query->the_post();
+						$id = get_the_ID();
+						?>
+							<li id="<?php echo $id ?>"><?php echo get_the_title() ?></li>	
+					
+						<?php endwhile; wp_reset_postdata(); ?>
+					</ul>
+					
 					<?php if( have_rows('states','option') ): ?>
 						<h6>We also serve several other states outside of Texas including:</h6>
 						<ul>
@@ -52,70 +73,6 @@ $container = get_theme_mod( 'understrap_container_type' );
 				<div class="col-lg-4 col-xxl-3">
 				</div>
 				<div class="col-lg-4 col-xxl-3">
-				</div>
-				<div class="col-md-4 col-lg-4 order-md-2 col-xl-3 mb-4 mb-lg-0">
-					<h6 class="h5">Contact Us</h6>
-					<ul class="footer-list fa-ul">
-						<?php if( get_field('address','option') ): ?>
-							<li>
-								<span class="fa-li">
-									<i class="fa fa-map-marker"></i>
-								</span>
-								<?php get_template_part( 'partial-templates/address' ); ?>
-							</li>
-						<?php endif ?>
-						
-						<?php if( get_field('phone','option') ): ?>
-							<?php $phone = str_replace(array('.'), '' , get_field('phone','option')) ?>
-							<li>
-								<span class="fa-li">
-									<i class="fa fa-phone"></i>
-								</span>
-								<a href="<?php echo 'tel:'.$phone ?>">
-									<?php echo get_field('phone','option') ?>
-								</a>
-							</li>
-						<?php endif ?>
-						
-						<?php if( get_field('email_estimating','option') || get_field('email_office','option') ): ?>
-							<?php 
-							$email_e = get_field('email_estimating','option');
-							$email_o = get_field('email_office','option')  
-							?>
-							<li>
-								<span class="fa-li">
-									<i class="fa fa-envelope"></i>
-								</span>
-								Estimating:
-								<a href="<?php echo 'mailto:'.$email?>">
-									<?php echo $email_e; ?>
-								</a>
-								<br>
-								Office:
-								<a href="<?php echo 'mailto:'.$email?>">
-									<?php echo $email_o ?>
-								</a>
-							</li>
-						<?php endif ?>
-					</ul>
-				</div>
-				<div class="col-md-8 col-lg-4 order-md-1 mb-4 mb-lg-0">
-					<h6 class="h5"><?php echo get_bloginfo(); ?></h6>
-					<p><em><?php echo get_bloginfo('description'); ?></em></p>
-					<?php if( get_field('desc','option') ): ?>
-						<?php echo get_field('desc','option') ?>
-					<?php endif ?>
-					<?php if( get_field('license','option') ): ?>
-						<strong>License #:</strong> <?php echo get_field('license','option') ?>
-					<?php endif ?>
-				</div>
-				<div class="col-md-12 col-lg-4 order-md-4 order-lg-0 col-xxl-3 align-self-center">
-					<div class="footer-logo mx-auto mx-lg-0">
-						<?php the_custom_logo(); ?>
-					</div>
-					<div class="copyright text-center text-lg-start mt-4">
-						<span>&copy; <?php echo date("Y").' '.get_bloginfo().' All Rights Reserved.'; ?></span>
-					</div>
 				</div>
 			</div>
 		</div>

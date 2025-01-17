@@ -16997,7 +16997,7 @@ body .h1, body .h2 {
   position: relative;
   font-size: 0.875rem;
   color: #fff;
-  background-color: #38B085;
+  background-color: #175676;
 }
 .footer .footer-inner > .container {
   position: relative;
@@ -17042,7 +17042,6 @@ body .h1, body .h2 {
 }
 .footer .footer-logo {
   max-width: 275px;
-  filter: brightness(0) invert(1);
 }
 .footer .footer-title {
   font-weight: 600;
