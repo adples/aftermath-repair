@@ -1,0 +1,32 @@
+.btn{
+	padding: .4rem 2rem;
+	border: none;
+	border-radius: 0;
+	text-transform: uppercase;
+	
+	&.btn-accent{
+		padding: 0;
+		background: transparent;
+		
+		&.btn-white{
+			color: $white;
+			@extend .text-shadow;
+		}
+		
+		&.btn-primary{
+			color: $primary;
+		}
+		
+		&.btn-secondary{
+			color: $secondary;
+			
+			i{
+				color: $primary;
+			}
+		}
+	}
+	
+	&.btn-solid{
+		
+	}
+}

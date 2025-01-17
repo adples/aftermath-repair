@@ -1,0 +1,15 @@
+{
+	"name": "acf/image",
+	"title": "Image",
+	"description": "Custom block.",
+	"category": "custom-theme",
+	"keywords": ["img", "image"],
+	"acf": {
+		"mode": "preview",
+		"renderTemplate": "image.php"
+	},
+	"supports": {
+		"anchor": true,
+		"jsx": true
+	}
+}

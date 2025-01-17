@@ -1,0 +1,15 @@
+{
+	"name": "acf/contact-info",
+	"title": "Contact Info",
+	"description": "Custom list block.",
+	"category": "custom-theme",
+	"keywords": ["contact", "info"],
+	"acf": {
+		"mode": "preview",
+		"renderTemplate": "contact-info.php"
+	},
+	"supports": {
+		"anchor": true,
+		"jsx": true
+	}
+}

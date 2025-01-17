@@ -1,0 +1,30 @@
+body{
+	@include primary-font();
+	font-weight: 400;
+	color: $text;
+	
+	.h1,.h2{
+		font-weight: bold;
+	}
+	
+	.h1{
+		@include media-breakpoint-up(lg){
+			
+		}
+		
+		@include media-breakpoint-up(xl){
+
+		}
+		
+		@include media-breakpoint-up(xxl){
+			
+		}
+	}
+	
+	p{
+		
+		@include media-breakpoint-up(xxl){
+			font-size: 1.15rem;
+		}
+	}
+}

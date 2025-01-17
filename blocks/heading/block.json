@@ -1,0 +1,16 @@
+{
+	"name": "acf/heading",
+	"title": "Custom Heading",
+	"description": "Custom title block.",
+	"category": "custom-theme",
+	"keywords": ["Title","Heading"],
+	"acf": {
+		"mode": "preview",
+		"renderTemplate": "heading.php"
+	},
+	"supports": {
+		"anchor": true,
+		"align": false,
+		"alignText": true
+	}
+}

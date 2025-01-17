@@ -1,0 +1,16 @@
+{
+	"name": "acf/content-cards",
+	"title": "Content Cards",
+	"description": "Custom block.",
+	"category": "custom-theme",
+	"icon": "admin-comments",
+	"keywords": ["content", "cards", "grid"],
+	"acf": {
+		"mode": "preview",
+		"renderTemplate": "content-cards.php"
+	},
+	"supports": {
+		"anchor": true,
+		"jsx": true
+	}
+}

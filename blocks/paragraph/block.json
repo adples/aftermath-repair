@@ -1,0 +1,15 @@
+{
+	"name": "acf/paragraph",
+	"title": "Custom Paragraph",
+	"description": "Custom paragraph block.",
+	"category": "custom-theme",
+	"keywords": ["Paragraph","Text"],
+	"acf": {
+		"mode": "preview",
+		"renderTemplate": "paragraph.php"
+	},
+	"supports": {
+		"anchor": true,
+		"alignText": true
+	}
+}

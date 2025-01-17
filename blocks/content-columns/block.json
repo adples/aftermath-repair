@@ -1,0 +1,16 @@
+{
+	"name": "acf/content-columns",
+	"title": "Content Columns",
+	"description": "Custom block.",
+	"category": "custom-theme",
+	"icon": "admin-comments",
+	"keywords": ["content", "columns", "grid"],
+	"acf": {
+		"mode": "preview",
+		"renderTemplate": "content-columns.php"
+	},
+	"supports": {
+		"anchor": true,
+		"jsx": true
+	}
+}

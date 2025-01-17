@@ -1,0 +1,15 @@
+{
+	"name": "acf/tabse",
+	"title": "Tabs",
+	"description": "Custom block.",
+	"category": "custom-theme",
+	"keywords": ["tabs", "content"],
+	"acf": {
+		"mode": "preview",
+		"renderTemplate": "tabs.php"
+	},
+	"supports": {
+		"anchor": true,
+		"jsx": true
+	}
+}

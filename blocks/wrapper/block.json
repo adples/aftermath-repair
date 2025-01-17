@@ -1,0 +1,15 @@
+{
+	"name": "acf/wrapper",
+	"title": "Content Wrapper",
+	"description": "Custom block.",
+	"category": "custom-theme",
+	"keywords": ["wrapper","container"],
+	"acf": {
+		"mode": "preview",
+		"renderTemplate": "wrapper.php"
+	},
+	"supports": {
+		"anchor": true,
+		"jsx": true
+	}
+}

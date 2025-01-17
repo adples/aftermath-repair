@@ -1,0 +1,16 @@
+{
+	"name": "acf/row",
+	"title": "Content Row",
+	"description": "Custom content block.",
+	"category": "custom-theme",
+	"keywords": ["lead","row"],
+	"acf": {
+		"mode": "preview",
+		"renderTemplate": "row.php"
+	},
+	"supports": {
+		"anchor": true,
+		"align": true,
+		"jsx": true
+	}
+}

@@ -1,0 +1,14 @@
+{
+	"name": "acf/map",
+	"title": "Map",
+	"description": "Custom block.",
+	"category": "custom-theme",
+	"keywords": ["map", "google"],
+	"acf": {
+		"mode": "preview",
+		"renderTemplate": "map.php"
+	},
+	"supports": {
+		"anchor": true
+	}
+}

@@ -1,0 +1,16 @@
+{
+	"name": "acf/banner",
+	"title": "Banner",
+	"description": "Custom home page block.",
+	"category": "custom-theme",
+	"icon": "admin-comments",
+	"keywords": ["banner", "home", "hero"],
+	"acf": {
+		"mode": "preview",
+		"renderTemplate": "banner.php"
+	},
+	"supports": {
+		"anchor": true,
+		"jsx": true
+	}
+}
