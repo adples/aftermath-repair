@@ -54,7 +54,7 @@ $navbar_type       = get_theme_mod( 'understrap_navbar_type', 'collapse' );
 			<div class="col-md-4">
 				<?php if( have_rows('social','option') ): ?>
 					<ul>
-						<?php while( have_rows('locations','option') ): the_row(); ?>
+						<?php while( have_rows('social','option') ): the_row(); ?>
 							<li>
 								<?php if( get_sub_field('icon') && get_sub_field('url') ): ?>
 									<a href="<?php echo esc_url(get_sub_field('url')) ?>"><?php echo get_sub_field('icon') ?></a>
