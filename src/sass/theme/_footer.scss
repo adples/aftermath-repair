@@ -24,17 +24,26 @@
 		flex-direction: row;
 		
 		li{
-			padding: .25rem;
+			padding: 0 .5rem 0 0;
+			margin: 0 .5rem .5rem 0;
+			line-height: 1;
 			
 			&:not(:last-child){
 				border-right: solid 1px $white;
 			}
+			
+			a{
+				color: $white;
+				text-decoration: underline dotted 1px rgba($white, .5);
+			}
 		}
 	}
+	
 	.footer-list,
 	.footer-list-icon{
 		@include list-unstyled();
 		margin-bottom: 0;
+		margin-left: 0;
 		
 		ul {
 			@include list-unstyled();
@@ -44,21 +53,17 @@
 		li{
 			padding-bottom: 1rem;
 			color: $white;
-			
-			@include media-breakpoint-up(xxl){
-				padding-bottom: 1.15rem;
-				padding-left: .5rem;
-			}
 		}
 		
 		i{
 			@include media-breakpoint-up(xxl){
-				font-size: 1.35rem;
+				font-size: 1.2rem;
 			}
 		}
 		
 		a{
-			//text-decoration: underline dotted 1px $white;
+			color: $white;
+			text-decoration: underline dotted 1px rgba($white, .5);
 		}
 	}
 	

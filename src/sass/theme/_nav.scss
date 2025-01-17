@@ -13,6 +13,7 @@
 	.topbar-list-contact,
 	.topbar-list-social{
 		@include list-unstyled();
+		margin-bottom: 0;
 		
 		@include media-breakpoint-up(md){
 			display: flex;
