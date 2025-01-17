@@ -27,7 +27,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 					
 					<?php if( get_field('desc','option') ): ?>
 						<div class="company-description">
-							<?php echo get_field('desc.','option') ?>
+							<?php echo get_field('desc','option') ?>
 						</div>
 					<?php endif ?>
 					
@@ -39,7 +39,6 @@ $container = get_theme_mod( 'understrap_container_type' );
 					<h6>Areas We Serve</h6>
 					
 					<?php
-					
 					$the_query = new WP_Query( array(
 						'post_type' => 'cities',
 						'posts_per_page' => 100, 
@@ -71,8 +70,67 @@ $container = get_theme_mod( 'understrap_container_type' );
 					<?php endif; ?>
 				</div>
 				<div class="col-lg-4 col-xxl-3">
+					<h6>Foundation Repair Services</h6>
+					
+					<?php
+					$the_query = new WP_Query( array(
+						'post_parent' => 18,
+						'post_type' => 'page',
+						'post_status' => 'publish',
+						'order'   => 'ASC'
+					  )
+					);
+					?>
+					
+					<ul>
+						<?php
+						while ( $the_query->have_posts() ) :
+							$the_query->the_post();
+							$id = get_the_ID();
+						?>
+							<li id="<?php echo $id ?>"><a href="<?php echo esc_url(get_the_permalink()) ?>"><?php echo get_the_title() ?></a></li>	
+					
+						<?php endwhile; wp_reset_postdata(); ?>
+					</ul>
 				</div>
 				<div class="col-lg-4 col-xxl-3">
+					<h6>Get In Touch</h6>
+					
+					<ul>
+						<?php if( get_field('phone','option') ): ?>
+							<?php $phone = str_replace(array('.'), '' , get_field('phone','option')) ?>
+							<li>
+								<a href="<?php echo 'tel:'.$phone ?>">
+								<span><i class="fa fa-phone"></i></span>
+								<?php echo get_field('phone','option') ?>
+								</a>
+							</li>
+						<?php endif ?>
+						
+						<?php if( get_field('email','option') ): ?>
+							<?php $email = get_field('email','option') ?>
+							<li>
+								<a href="<?php echo 'mailto:'.$email ?>">
+									<span><i class="fa fa-envelope"></i></span>
+									<?php echo get_field('email','option') ?>
+								</a>
+							</li>
+						<?php endif ?>
+						
+						<?php if( have_rows('social','option') ): ?>
+							<?php while( have_rows('social','option') ): the_row(); ?>
+								<?php if( get_sub_field('icon') && get_sub_field('url') ): ?>
+									<li>
+										<a href="<?php echo esc_url(get_sub_field('url')) ?>">
+											<span><i class="fa fa-envelope"></i></span>
+											<?php echo get_sub_field('icon') ?>
+											<?php echo get_sub_field('platform') ?>
+										</a>
+									</li>
+								<?php endif; ?>
+							<?php endwhile ?>	
+						<?php endif ?>
+					</ul>
 				</div>
 			</div>
 		</div>
