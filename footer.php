@@ -45,14 +45,14 @@ $container = get_theme_mod( 'understrap_container_type' );
 						'posts_per_page' => 100, 
 						'order'   => ASC,
 					  )
-					) );
+					);
 					?>
 					
 					<ul>
 						<?php
 						while ( $the_query->have_posts() ) :
-						$the_query->the_post();
-						$id = get_the_ID();
+							$the_query->the_post();
+							$id = get_the_ID();
 						?>
 							<li id="<?php echo $id ?>"><?php echo get_the_title() ?></li>	
 					
