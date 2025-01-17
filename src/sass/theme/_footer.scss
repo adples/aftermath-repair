@@ -1,6 +1,5 @@
 .footer{
 	position: relative;
-	font-size: .875rem;
 	color: $white;
 	background-color: $secondary;
 	
@@ -19,7 +18,21 @@
 		}
 	}
 	
-	.footer-list{
+	.footer-list-inline{
+		@include list-unstyled();
+		display: flex;
+		flex-direction: row;
+		
+		li{
+			padding: .25rem;
+			
+			&:not(:last-child){
+				border-right: solid 1px $white;
+			}
+		}
+	}
+	.footer-list,
+	.footer-list-icon{
 		@include list-unstyled();
 		margin-bottom: 0;
 		
@@ -45,7 +58,7 @@
 		}
 		
 		a{
-			text-decoration: underline dotted 1px $white;
+			//text-decoration: underline dotted 1px $white;
 		}
 	}
 	
@@ -61,35 +74,8 @@
 		color: $white;
 	}
 	
-	p,ul,span,a,address{
-		color: $white;
-		
-		@include media-breakpoint-up(xl){
-			font-size: 1rem;
-		}
-	}
-	
 	p{
-	}
-	
-	a{
-		text-decoration: none;
-	}
-	
-	address{
-		margin-bottom: 0;
-	}
-	
-	hr{
-		margin: 1.5rem 0;
-		border-top: solid 1px $primary;
-		opacity: 1;
-	}
-	
-	.copyright{
-		span{
-			font-size: .875rem;
-		}
+		font-size: .875rem;
 	}
 	
 	.subfooter{

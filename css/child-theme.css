@@ -16325,6 +16325,7 @@ html body.logged-in.admin-bar .navbar.navbar-reveal.affix {
 .topbar .topbar-list-contact li a,
 .topbar .topbar-list-social li a {
   color: #fff;
+  text-decoration: none;
 }
 @media (min-width: 768px) {
   .topbar .topbar-list-contact {
@@ -16344,13 +16345,6 @@ html body.logged-in.admin-bar .navbar.navbar-reveal.affix {
   margin-left: 0.5rem;
 }
 
-#main-nav {
-  position: static;
-  width: 100%;
-  z-index: 1;
-  background-color: #fff;
-}
-
 .navbar {
   width: 100%;
   padding: 0.25rem 0;
@@ -16360,12 +16354,32 @@ html body.logged-in.admin-bar .navbar.navbar-reveal.affix {
     padding: 0.5rem 0;
   }
 }
+.navbar.navbar-main {
+  position: static;
+  width: 100%;
+  z-index: 1;
+  background-color: #fff;
+}
+@media (min-width: 992px) {
+  .navbar.navbar-main {
+    margin-bottom: 1rem;
+  }
+}
+@media (min-width: 1300px) {
+  .navbar.navbar-main {
+    margin-bottom: 2rem;
+  }
+}
 .navbar.affix .navbar-brand {
   width: 200px !important;
 }
 .navbar .navbar-inner {
+  display: flex;
+  flex-wrap: inherit;
+  align-items: center;
+  justify-content: space-between;
   padding: 1rem 0;
-  border-bottom: solid 1px #5E575E;
+  border-bottom: solid 1px rgba(94, 87, 94, 0.33);
 }
 @media (min-width: 992px) {
   .navbar .navbar-inner {
@@ -16777,10 +16791,15 @@ body .h1, body .h2 {
 }
 
 .btn, .wpcf7 input[type=submit], .woocommerce-notices-wrapper .woocommerce-message a.button, .woocommerce-info a.button {
-  padding: 0.4rem 2rem;
+  padding: 0.4rem 1.75rem;
   border: none;
   border-radius: 0;
   text-transform: uppercase;
+  font-weight: 600;
+}
+.btn.btn-primary, .wpcf7 input.btn-primary[type=submit], .woocommerce-notices-wrapper .woocommerce-message a.btn-primary.button, .woocommerce-info a.btn-primary.button {
+  color: #fff;
+  background-color: #32161F;
 }
 .btn.btn-accent, .wpcf7 input.btn-accent[type=submit], .woocommerce-notices-wrapper .woocommerce-message a.btn-accent.button, .woocommerce-info a.btn-accent.button {
   padding: 0;
@@ -17060,7 +17079,6 @@ body .h1, body .h2 {
 
 .footer {
   position: relative;
-  font-size: 0.875rem;
   color: #fff;
   background-color: #175676;
 }
@@ -17076,34 +17094,47 @@ body .h1, body .h2 {
     padding-bottom: 4rem;
   }
 }
-.footer .footer-list {
+.footer .footer-list-inline {
+  padding-left: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+}
+.footer .footer-list-inline li {
+  padding: 0.25rem;
+}
+.footer .footer-list-inline li:not(:last-child) {
+  border-right: solid 1px #fff;
+}
+.footer .footer-list,
+.footer .footer-list-icon {
   padding-left: 0;
   list-style: none;
   margin-bottom: 0;
 }
-.footer .footer-list ul {
+.footer .footer-list ul,
+.footer .footer-list-icon ul {
   padding-left: 0;
   list-style: none;
   margin-bottom: 0;
 }
-.footer .footer-list li {
+.footer .footer-list li,
+.footer .footer-list-icon li {
   padding-bottom: 1rem;
   color: #fff;
 }
 @media (min-width: 1560px) {
-  .footer .footer-list li {
+  .footer .footer-list li,
+  .footer .footer-list-icon li {
     padding-bottom: 1.15rem;
     padding-left: 0.5rem;
   }
 }
 @media (min-width: 1560px) {
-  .footer .footer-list i {
+  .footer .footer-list i,
+  .footer .footer-list-icon i {
     font-size: 1.35rem;
   }
-}
-.footer .footer-list a {
-  -webkit-text-decoration: underline dotted 1px #fff;
-  text-decoration: underline dotted 1px #fff;
 }
 .footer .footer-logo {
   max-width: 275px;
@@ -17112,26 +17143,7 @@ body .h1, body .h2 {
   font-weight: 600;
   color: #fff;
 }
-.footer p, .footer ul, .footer span, .footer a, .footer address {
-  color: #fff;
-}
-@media (min-width: 1300px) {
-  .footer p, .footer ul, .footer span, .footer a, .footer address {
-    font-size: 1rem;
-  }
-}
-.footer a {
-  text-decoration: none;
-}
-.footer address {
-  margin-bottom: 0;
-}
-.footer hr {
-  margin: 1.5rem 0;
-  border-top: solid 1px #38B085;
-  opacity: 1;
-}
-.footer .copyright span {
+.footer p {
   font-size: 0.875rem;
 }
 .footer .subfooter {
