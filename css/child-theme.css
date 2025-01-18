@@ -16379,6 +16379,7 @@ html body.logged-in.admin-bar .navbar.navbar-reveal.affix {
   flex-wrap: inherit;
   align-items: center;
   justify-content: space-between;
+  width: 100%;
   padding: 1rem 0;
   border-bottom: solid 1px rgba(94, 87, 94, 0.33);
 }
@@ -17152,7 +17153,8 @@ body .h1, body .h2 {
   font-weight: 600;
   color: #fff;
 }
-.footer p {
+.footer p,
+.footer .footer-copyright {
   font-size: 0.875rem;
 }
 .footer .subfooter {
