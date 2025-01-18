@@ -21,18 +21,22 @@ $container = get_theme_mod( 'understrap_container_type' );
 		<div class="container">
 			<div class="row gx-xxl-5">
 				<div class="col-lg-10 col-xl-8 col-xxl-4">
-					<div class="footer-logo mb-4">
-						<?php the_custom_logo(); ?>
-					</div>
-					
-					<?php if( get_field('desc','option') ): ?>
-						<div class="footer-description">
-							<?php echo get_field('desc','option') ?>
+					<div class="row">
+						<div class="col-12 col-lg-4 order-lg-1 col-xxl-12 order-xxl-0">
+							<div class="footer-logo mb-4">
+								<?php the_custom_logo(); ?>
+							</div>
 						</div>
-					<?php endif ?>
-					
-					<div class="footer-copyright">
-						<span>&copy; <?php echo date("Y").' '.get_bloginfo().' All Rights Reserved.'; ?></span>
+						<div class="col-12 col-lg-8 col-xxl-12">
+							<?php if( get_field('desc','option') ): ?>
+								<div class="footer-description">
+									<?php echo get_field('desc','option') ?>
+								</div>
+							<?php endif ?>
+							<div class="footer-copyright">
+								<span>&copy; <?php echo date("Y").' '.get_bloginfo().' All Rights Reserved.'; ?></span>
+							</div>
+						</div>
 					</div>
 				</div>
 				<div class="col-xxl-8">
