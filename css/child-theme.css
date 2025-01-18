@@ -17153,8 +17153,7 @@ body .h1, body .h2 {
   font-weight: 600;
   color: #fff;
 }
-.footer p,
-.footer .footer-copyright {
+.footer p, .footer ul .footer-copyright {
   font-size: 0.875rem;
 }
 .footer .subfooter {
