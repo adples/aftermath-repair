@@ -19,7 +19,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 <div class="footer" id="wrapper-footer">
 	<div class="footer-inner">
 		<div class="container">
-			<div class="row">
+			<div class="row gx-xxl-5">
 				<div class="col-lg-10 col-xl-8 col-xxl-4">
 					<div class="footer-logo mb-4">
 						<?php the_custom_logo(); ?>
@@ -36,8 +36,8 @@ $container = get_theme_mod( 'understrap_container_type' );
 					</div>
 				</div>
 				<div class="col-xxl-8">
-					<div class="row">
-						<div class="col-lg-4">
+					<div class="row gx-xxl-5">
+						<div class="col-lg-5">
 							<h6 class="h5">Areas We Serve</h6>
 							
 							<?php
@@ -96,7 +96,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 								<?php endwhile; wp_reset_postdata(); ?>
 							</ul>
 						</div>
-						<div class="col-lg-4">
+						<div class="col-lg-3">
 							<h6 class="h5">Get In Touch</h6>
 							
 							<ul class="footer-list-icon fa-ul">
