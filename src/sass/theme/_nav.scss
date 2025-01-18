@@ -23,6 +23,16 @@
 			a{
 				color: $white;
 				text-decoration: none;
+				
+				&:hover{
+					i{
+						color: $primary;
+					}
+				}
+				
+				i{
+					transition: color ease-in-out .3s;
+				}
 			}
 		}
 	}
@@ -44,7 +54,7 @@
 		flex-direction: row-reverse;
 		
 		li{
-			margin-left: .5rem;
+			margin-left: 1rem;
 		}
 	}
 }
@@ -149,7 +159,7 @@
 		}
 		
 		@include media-breakpoint-up(xxl){
-			max-width: 400px;
+			max-width: 370px;
 		}
 	}
 	
@@ -187,7 +197,7 @@
 			}
 			
 			@include media-breakpoint-up(xxl){
-				font-size: 1.1rem;
+				//font-size: 1.1rem;
 			}
 		}
 		

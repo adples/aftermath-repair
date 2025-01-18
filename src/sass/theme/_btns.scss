@@ -4,10 +4,16 @@
 	border-radius: 0;
 	text-transform: uppercase;
 	font-weight: 600;
+	transition: color ease-in-out .3s,
+				background-color ease-in-out .3s;
 	
 	&.btn-primary{
 		color: $white;
 		background-color: $tamarind;
+		
+		&:hover{
+			background-color: $primary;
+		}
 	}
 	
 	&.btn-accent{

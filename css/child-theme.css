@@ -16328,6 +16328,14 @@ html body.logged-in.admin-bar .navbar.navbar-reveal.affix {
   color: #fff;
   text-decoration: none;
 }
+.topbar .topbar-list-contact li a:hover i,
+.topbar .topbar-list-social li a:hover i {
+  color: #38B085;
+}
+.topbar .topbar-list-contact li a i,
+.topbar .topbar-list-social li a i {
+  transition: color ease-in-out 0.3s;
+}
 @media (min-width: 768px) {
   .topbar .topbar-list-contact {
     flex-direction: row;
@@ -16343,7 +16351,7 @@ html body.logged-in.admin-bar .navbar.navbar-reveal.affix {
   flex-direction: row-reverse;
 }
 .topbar .topbar-list-social li {
-  margin-left: 0.5rem;
+  margin-left: 1rem;
 }
 
 .navbar {
@@ -16423,7 +16431,7 @@ html body.logged-in.admin-bar .navbar.navbar-reveal.affix {
 }
 @media (min-width: 1560px) {
   .navbar .navbar-brand {
-    max-width: 400px;
+    max-width: 370px;
   }
 }
 .navbar .navbar-collapse {
@@ -16456,11 +16464,6 @@ html body.logged-in.admin-bar .navbar.navbar-reveal.affix {
 @media (min-width: 1300px) {
   .navbar .nav-item .nav-link {
     padding: 0.4rem 1.25rem;
-  }
-}
-@media (min-width: 1560px) {
-  .navbar .nav-item .nav-link {
-    font-size: 1.1rem;
   }
 }
 @media (min-width: 992px) {
@@ -16798,10 +16801,14 @@ body .h1, body .h2 {
   border-radius: 0;
   text-transform: uppercase;
   font-weight: 600;
+  transition: color ease-in-out 0.3s, background-color ease-in-out 0.3s;
 }
 .btn.btn-primary, .wpcf7 input.btn-primary[type=submit], .woocommerce-notices-wrapper .woocommerce-message a.btn-primary.button, .woocommerce-info a.btn-primary.button {
   color: #fff;
   background-color: #32161F;
+}
+.btn.btn-primary:hover, .wpcf7 input.btn-primary[type=submit]:hover, .woocommerce-notices-wrapper .woocommerce-message a.btn-primary.button:hover, .woocommerce-info a.btn-primary.button:hover {
+  background-color: #38B085;
 }
 .btn.btn-accent, .wpcf7 input.btn-accent[type=submit], .woocommerce-notices-wrapper .woocommerce-message a.btn-accent.button, .woocommerce-info a.btn-accent.button {
   padding: 0;
@@ -17116,6 +17123,9 @@ body .h1, body .h2 {
   -webkit-text-decoration: underline dotted 1px rgba(255, 255, 255, 0.5);
   text-decoration: underline dotted 1px rgba(255, 255, 255, 0.5);
 }
+.footer .footer-list-inline li a:hover {
+  text-decoration-color: #38B085;
+}
 .footer .footer-list,
 .footer .footer-list-icon {
   padding-left: 0;
@@ -17139,6 +17149,10 @@ body .h1, body .h2 {
   color: #fff;
   -webkit-text-decoration: underline dotted 1px rgba(255, 255, 255, 0.5);
   text-decoration: underline dotted 1px rgba(255, 255, 255, 0.5);
+}
+.footer .footer-list a:hover,
+.footer .footer-list-icon a:hover {
+  text-decoration-color: #38B085;
 }
 .footer .footer-logo {
   max-width: 290px;
