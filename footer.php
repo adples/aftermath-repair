@@ -38,12 +38,12 @@ $container = get_theme_mod( 'understrap_container_type' );
 							</div>
 						</div>
 					</div>
-					<hr class="footer-hr">
+					<hr class="footer-hr d-xxl-none">
 				</div>
 				<div class="col-xxl-8">
 					<div class="row gx-xxl-5">
 						<div class="col-lg-5">
-							<h6 class="h5">Areas We Serve</h6>
+							<h6 class="h5 mb-3">Areas We Serve in Texas</h6>
 							
 							<?php
 							$the_query = new WP_Query( array(
@@ -54,7 +54,6 @@ $container = get_theme_mod( 'understrap_container_type' );
 							);
 							?>
 							
-							<h6>Texas</h6>
 							<ul class="footer-list-inline">
 								<?php
 								while ( $the_query->have_posts() ) :
@@ -67,7 +66,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 							</ul>
 							
 							<?php if( have_rows('states','option') ): ?>
-								<h6>We also serve several other states outside of Texas including:</h6>
+								<h6 class="mb-3">We also serve several other states outside of Texas including:</h6>
 								<ul class="footer-list-inline">
 									<?php while( have_rows('states','option') ): the_row(); ?>
 										<?php if( get_sub_field('state') ): ?>
@@ -76,9 +75,10 @@ $container = get_theme_mod( 'understrap_container_type' );
 									<?php endwhile; ?>
 								</ul>
 							<?php endif; ?>
+							<hr class="footer-hr d-lg-none">
 						</div>
 						<div class="col-lg-4">
-							<h6 class="h5">Foundation Repair Services</h6>
+							<h6 class="h5 mb-3">Foundation Repair Services</h6>
 							
 							<?php
 							$the_query = new WP_Query( array(
@@ -100,9 +100,10 @@ $container = get_theme_mod( 'understrap_container_type' );
 							
 								<?php endwhile; wp_reset_postdata(); ?>
 							</ul>
+							<hr class="footer-hr d-lg-none">
 						</div>
 						<div class="col-lg-3">
-							<h6 class="h5">Get In Touch</h6>
+							<h6 class="h5 mb-3">Get In Touch</h6>
 							
 							<ul class="footer-list-icon fa-ul">
 								<?php if( get_field('phone','option') ): ?>

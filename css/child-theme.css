@@ -17131,14 +17131,8 @@ body .h1, body .h2 {
 }
 .footer .footer-list li,
 .footer .footer-list-icon li {
-  padding-bottom: 1rem;
+  padding-bottom: 0.75rem;
   color: #fff;
-}
-@media (min-width: 1560px) {
-  .footer .footer-list i,
-  .footer .footer-list-icon i {
-    font-size: 1.2rem;
-  }
 }
 .footer .footer-list a,
 .footer .footer-list-icon a {
@@ -17157,10 +17151,9 @@ body .h1, body .h2 {
 .footer .footer-logo .custom-logo-link {
   display: block;
 }
-@media (min-width: 1560px) {
-  .footer .footer-hr {
-    display: none;
-  }
+.footer .footer-hr {
+  margin: 2rem 0;
+  opacity: 0.1;
 }
 .footer .footer-title {
   font-weight: 600;

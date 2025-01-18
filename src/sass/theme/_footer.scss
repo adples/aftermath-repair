@@ -52,14 +52,8 @@
 		}
 		
 		li{
-			padding-bottom: 1rem;
+			padding-bottom: .75rem;
 			color: $white;
-		}
-		
-		i{
-			@include media-breakpoint-up(xxl){
-				font-size: 1.2rem;
-			}
 		}
 		
 		a{
@@ -81,9 +75,8 @@
 	}
 	
 	.footer-hr{
-		@include media-breakpoint-up(xxl){
-			display: none;
-		}
+		margin: 2rem 0;
+		opacity: .1;
 	}
 	
 	.footer-title{
