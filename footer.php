@@ -21,7 +21,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 		<div class="container">
 			<div class="row gx-xxl-5">
 				<div class="col-xxl-4">
-					<div class="row">
+					<div class="row gx-xl-5 align-items-center">
 						<div class="col-12 col-lg-4 order-lg-1 col-xxl-12 order-xxl-0">
 							<div class="footer-logo mb-4">
 								<?php the_custom_logo(); ?>
@@ -38,6 +38,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 							</div>
 						</div>
 					</div>
+					<hr class="footer-hr">
 				</div>
 				<div class="col-xxl-8">
 					<div class="row gx-xxl-5">
@@ -107,9 +108,9 @@ $container = get_theme_mod( 'understrap_container_type' );
 								<?php if( get_field('phone','option') ): ?>
 									<?php $phone = str_replace(array('.'), '' , get_field('phone','option')) ?>
 									<li>
-										<a href="<?php echo 'tel:'.$phone ?>">
 										<span><i class="fa fa-phone"></i></span>
-										<?php echo get_field('phone','option') ?>
+										<a href="<?php echo 'tel:'.$phone ?>">
+											<?php echo get_field('phone','option') ?>
 										</a>
 									</li>
 								<?php endif ?>
@@ -117,8 +118,8 @@ $container = get_theme_mod( 'understrap_container_type' );
 								<?php if( get_field('email','option') ): ?>
 									<?php $email = get_field('email','option') ?>
 									<li>
+										<span><i class="fa fa-envelope"></i></span>
 										<a href="<?php echo 'mailto:'.$email ?>">
-											<span><i class="fa fa-envelope"></i></span>
 											<?php echo get_field('email','option') ?>
 										</a>
 									</li>
@@ -128,8 +129,8 @@ $container = get_theme_mod( 'understrap_container_type' );
 									<?php while( have_rows('social','option') ): the_row(); ?>
 										<?php if( get_sub_field('icon') && get_sub_field('url') ): ?>
 											<li>
+												<span><?php echo get_sub_field('icon') ?></span>
 												<a href="<?php echo esc_url(get_sub_field('url')) ?>">
-													<span><?php echo get_sub_field('icon') ?></span>
 													<?php echo get_sub_field('platform') ?>
 												</a>
 											</li>

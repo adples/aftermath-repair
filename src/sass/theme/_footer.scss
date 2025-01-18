@@ -69,9 +69,20 @@
 	}
 	
 	.footer-logo{
-		max-width: 275px;
+		max-width: 290px;
 		
-		@include media-breakpoint-up(lg){
+		@include media-breakpoint-only(xl){
+			max-width: 370px;
+		}
+		
+		.custom-logo-link{
+			display: block;
+		}
+	}
+	
+	.footer-hr{
+		@include media-breakpoint-up(xxl){
+			display: none;
 		}
 	}
 	
@@ -80,7 +91,7 @@
 		color: $white;
 	}
 	
-	p, ul
+	p, ul,
 	.footer-copyright,{
 		font-size: .875rem;
 	}

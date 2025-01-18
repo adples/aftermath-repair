@@ -17147,13 +17147,27 @@ body .h1, body .h2 {
   text-decoration: underline dotted 1px rgba(255, 255, 255, 0.5);
 }
 .footer .footer-logo {
-  max-width: 275px;
+  max-width: 290px;
+}
+@media (min-width: 1300px) and (max-width: 1559.98px) {
+  .footer .footer-logo {
+    max-width: 370px;
+  }
+}
+.footer .footer-logo .custom-logo-link {
+  display: block;
+}
+@media (min-width: 1560px) {
+  .footer .footer-hr {
+    display: none;
+  }
 }
 .footer .footer-title {
   font-weight: 600;
   color: #fff;
 }
-.footer p, .footer ul .footer-copyright {
+.footer p, .footer ul,
+.footer .footer-copyright {
   font-size: 0.875rem;
 }
 .footer .subfooter {
