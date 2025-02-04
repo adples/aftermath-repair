@@ -1,11 +1,16 @@
 .btn{
-	padding: .4rem 1.75rem;
+	padding: .65rem 1.35rem;
 	border: none;
 	border-radius: 0;
 	text-transform: uppercase;
 	font-weight: 600;
 	transition: color ease-in-out .3s,
 				background-color ease-in-out .3s;
+	&:hover{
+		i{
+			left: 4px;
+		}	
+	}
 	
 	&.btn-primary{
 		color: $white;
@@ -16,29 +21,47 @@
 		}
 	}
 	
+	&.btn-secondary{
+		color: $white;
+		background-color: $secondary;
+		
+		&:hover{
+			background-color: $primary;
+		}
+	}
+	
 	&.btn-accent{
+		position: relative;
 		padding: 0;
-		background: transparent;
+		background-color: transparent;
+		transition: color ease-in-out .3s;
 		
 		&.btn-white{
 			color: $white;
-			@extend .text-shadow;
 		}
 		
 		&.btn-primary{
-			color: $primary;
+			
 		}
 		
 		&.btn-secondary{
 			color: $secondary;
 			
-			i{
+			&:hover{
 				color: $primary;
+				background-color: transparent;
+				
 			}
 		}
 	}
 	
 	&.btn-solid{
 		
+	}
+	
+	i{
+		position: relative;
+		left: 0;
+		transition: all ease-in-out .3s;
 	}
 }

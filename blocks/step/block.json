@@ -1,0 +1,15 @@
+{
+	"name": "acf/step",
+	"title": "Process Step",
+	"description": "Custom content block.",
+	"category": "custom-theme",
+	"keywords": ["step","process"],
+	"acf": {
+		"mode": "preview",
+		"renderTemplate": "step.php"
+	},
+	"supports": {
+		"anchor": true,
+		"jsx": true
+	}
+}

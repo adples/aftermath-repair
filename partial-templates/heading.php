@@ -22,7 +22,7 @@ if( have_rows('heading') ):
 		}
 			
 		if( get_sub_field('heading') ):
-			echo '<'.$level.' class="'.$style.' '.$accent.' '.$color.'">'.get_sub_field('heading').'</'.$level.'>';
+			echo '<'.$level.' class="'.$style.' '.$accent.' '.$color.'"><span>'.get_sub_field('heading').'</span></'.$level.'>';
 		endif; 
 	endwhile; 
 endif;

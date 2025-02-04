@@ -107,6 +107,11 @@ function understrap_child_register_acf_blocks() {
 		'icon' => $site_icon
 	]);
 	
+	register_block_type( __DIR__ . '/blocks/banner-interior',
+	[
+		'icon' => $site_icon
+	]);
+	
 	register_block_type( __DIR__ . '/blocks/wrapper',
 	[
 		'icon' => $site_icon
@@ -142,6 +147,26 @@ function understrap_child_register_acf_blocks() {
 		'icon' => $site_icon
 	]);
 	
+	register_block_type( __DIR__ . '/blocks/team',
+	[
+		'icon' => $site_icon
+	]);
+	
+	register_block_type( __DIR__ . '/blocks/tabs',
+	[
+		'icon' => $site_icon
+	]);
+	
+	register_block_type( __DIR__ . '/blocks/carousel',
+	[
+		'icon' => $site_icon
+	]);
+	
+	register_block_type( __DIR__ . '/blocks/testimonial-slider',
+	[
+		'icon' => $site_icon
+	]);
+	
 	register_block_type( __DIR__ . '/blocks/heading',
 	[
 		'icon' => $site_icon
@@ -163,6 +188,26 @@ function understrap_child_register_acf_blocks() {
 	]);
 	
 	register_block_type( __DIR__ . '/blocks/image',
+	[
+		'icon' => $site_icon
+	]);
+	
+	register_block_type( __DIR__ . '/blocks/accordion',
+	[
+		'icon' => $site_icon
+	]);
+	
+	register_block_type( __DIR__ . '/blocks/cta',
+	[
+		'icon' => $site_icon
+	]);
+	
+	register_block_type( __DIR__ . '/blocks/step',
+	[
+		'icon' => $site_icon
+	]);
+	
+	register_block_type( __DIR__ . '/blocks/bubble-list',
 	[
 		'icon' => $site_icon
 	]);
@@ -220,7 +265,7 @@ function acf_should_wrap_innerblocks( $wrap, $name ) {
 function add_cta_to_nav( $items, $args ) {
 	 if ($args->theme_location == 'primary') {
 		 $url = get_permalink(32);
-		 $items .= '<li class="nav-item ms-lg-auto"><a class="nav-link nav-btn btn btn-primary" href="'.$url.'">Schedule a Free Evaluation</a></li>';
+		 $items .= '<li class="nav-item nav-item-btn ms-xl-auto"><a class="nav-link nav-btn btn btn-secondary" href="'.$url.'">Free Evaluation&nbsp;&nbsp;<i class="fa fa-angle-double-right"></i></a></li>';
 	 }
 	 return $items;
  }
@@ -230,7 +275,7 @@ function add_cta_to_nav( $items, $args ) {
  * Gravity Forms - change default button
  */
 function form_submit_button( $button, $form ) {
-	return "<button class='btn btn-secondary btn-accent btn-default ' id='gform_submit_button_{$form['id']}'>Send Message&nbsp;&nbsp;<i class='fa fa-angle-double-right'></i></button>";
+	return "<button class='btn btn-secondary' id='gform_submit_button_{$form['id']}'>Send Message&nbsp;&nbsp;<i class='fa fa-angle-double-right'></i></button>";
 }
 add_filter( 'gform_submit_button', 'form_submit_button', 10, 2 );
 
@@ -252,4 +297,41 @@ function list_icon($icon) {
    $string = '<span class="fa-li">'.$icon.'</span>';
    
    return $string;
+}
+
+if ( ! function_exists( 'understrap_post_nav' ) ) {
+	/**
+	 * Display navigation to next/previous post when applicable.
+	 *
+	 * @global WP_Post|null $post The current post.
+	 */
+	function understrap_post_nav() {
+		global $post;
+		if ( ! $post ) {
+			return;
+		}
+
+		// Don't print empty markup if there's nowhere to navigate.
+		$previous = ( is_attachment() ) ? get_post( $post->post_parent ) : get_adjacent_post( false, '', true );
+		$next     = get_adjacent_post( false, '', false );
+		if ( ! $next && ! $previous ) {
+			return;
+		}
+		?>
+		<hr>
+		<nav class="container navigation post-navigation">
+			<h2 class="screen-reader-text"><?php esc_html_e( 'Post navigation', 'understrap' ); ?></h2>
+			<div class="d-flex nav-links justify-content-between">
+				<?php
+				if ( get_previous_post_link() ) {
+					previous_post_link( '<span class="nav-previous">%link</span>', _x( '<i class="fa fa-angle-double-left"></i>&nbsp;%title', 'Previous post link', 'understrap' ) );
+				}
+				if ( get_next_post_link() ) {
+					next_post_link( '<span class="nav-next">%link</span>', _x( '%title&nbsp;<i class="fa fa-angle-double-right"></i>', 'Next post link', 'understrap' ) );
+				}
+				?>
+			</div><!-- .nav-links -->
+		</nav><!-- .post-navigation -->
+		<?php
+	}
 }

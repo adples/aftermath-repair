@@ -1,0 +1,15 @@
+{
+	"name": "acf/team",
+	"title": "Team",
+	"description": "Custom block.",
+	"category": "custom-theme",
+	"keywords": ["team", "bios", "staff"],
+	"acf": {
+		"mode": "preview",
+		"renderTemplate": "team.php"
+	},
+	"supports": {
+		"anchor": true,
+		"jsx": true
+	}
+}

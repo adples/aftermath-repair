@@ -34,8 +34,9 @@ html{
 	}
 	
 	@include media-breakpoint-up(lg){
-		.interface-complementary-area {
-			  width: 425px;
+		.interface-complementary-area,
+		.interface-complementary-area__fill {
+			  width: 400px!important;
 		}
 	}
 }

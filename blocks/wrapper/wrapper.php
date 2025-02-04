@@ -50,8 +50,17 @@ if( get_field('bg') ){
 		}
 	</style>
 <?php endif; ?>
- 
+
+<?php if( get_field('use_icon') && get_field('icon') ): ?>
+	<?php get_template_part( 'partial-templates/section-icon', null, array('icon_bg' => get_field('icon_bg')) ); ?>
+<?php endif; ?> 
+
 <section <?php echo esc_attr( $anchor ); ?> <?php echo $attributes ?>>
+	
+	<?php if( get_field('use_icon') && get_field('icon')  ): ?>
+		<?php $img = get_field('icon'); ?>
+		<img src="<?php echo esc_url($img['url']); ?>" class="section-icon" alt="<?php echo esc_attr($img['alt']); ?>"/>
+	<?php endif; ?> 
 	
 	<?php if( get_field('container') ): ?>
 		

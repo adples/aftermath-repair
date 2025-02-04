@@ -9,14 +9,16 @@ $neutral: #ccc;
 $text: --bs-body-color;
 $white: #fff;
 
+$dark: #2f2f2f;
 $chathams-blue: #175676;
 $keppel: #38B085;
+$light-gray: #e7e6e7;
 $scorpion: #5E575E;
-$silver: #C3C3C3;
+$silver: #b4b3b3;
 $tamarind: #32161F;
 
 $primary: $keppel;
-$secondary: $chathams-blue;
+$secondary: $dark;
 $text: $scorpion;
 
 $primary-font: "Cabin", serif;
@@ -86,3 +88,35 @@ $mw-sm: map-get($container-max-widths, "sm");
 	font-variation-settings:
 		"wdth" 100;
 }
+
+@mixin img-wrapper {
+	position: relative;
+	display: block;
+	width: 100%;
+}
+
+@mixin cover{
+	position: absolute;
+	display: block;
+	object-fit: cover;
+	height: 100%;
+	width: 100%;
+}
+
+@mixin img-ratio ($ratio: 66%){
+	padding-bottom: $ratio;
+	
+	img{
+		@include cover();
+	}
+}
+
+@mixin img-cover{
+	height: 100%;
+	
+	img{
+		@include cover();
+	}
+}
+
+

@@ -92,7 +92,7 @@ endif;
 				<?php if( get_sub_field('list_item') ): ?>
 					<li>
 						<?php if( $use_icon == true && $icon != '' ){ echo list_icon($icon); } ?>
-						<?php the_sub_field('list_item') ?>
+						<?php echo get_sub_field('list_item') ?>
 					</li>
 				<?php endif; ?>
 			<?php endwhile; ?>

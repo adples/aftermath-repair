@@ -1,0 +1,15 @@
+{
+	"name": "acf/bubble-list",
+	"title": "Bubble List",
+	"description": "Custom content block.",
+	"category": "custom-theme",
+	"keywords": ["list","bubble"],
+	"acf": {
+		"mode": "preview",
+		"renderTemplate": "bubble-list.php"
+	},
+	"supports": {
+		"anchor": true,
+		"jsx": true
+	}
+}

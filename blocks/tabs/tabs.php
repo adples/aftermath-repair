@@ -16,6 +16,7 @@ if ( ! empty( $block['className'] ) ) {
 }
 
 ?>
-
-<?php get_template_part( 'partial-templates/tabs', null, array('add_class' => $add_class) ); ?>
+<div <?php echo esc_attr( $anchor ); ?> class="tab-wrapper">
+	<?php get_template_part( 'partial-templates/tabs', null, array('add_class' => $add_class) ); ?>
+</div>
  

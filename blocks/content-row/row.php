@@ -32,8 +32,8 @@ if( have_rows('content_row') ):
 endif;
 ?>
  
-<div <?php echo esc_attr( $anchor ); ?> class="row <?php echo $block['className'].' '.$align  ?>">
-	<div class="<?php echo $col ?>">
+<div <?php echo esc_attr( $anchor ); ?> class="row <?php echo $align  ?>">
+	<div class="<?php echo $col.' '.$add_class ?>">
 		<InnerBlocks />
 	</div>
 </div>

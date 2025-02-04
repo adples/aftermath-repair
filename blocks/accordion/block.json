@@ -1,0 +1,14 @@
+{
+	"name": "acf/accordion",
+	"title": "Accordion",
+	"description": "Custom block.",
+	"category": "custom-theme",
+	"keywords": ["accordion", "panels"],
+	"acf": {
+		"mode": "preview",
+		"renderTemplate": "accordion.php"
+	},
+	"supports": {
+		"anchor": true
+	}
+}

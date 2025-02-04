@@ -16,7 +16,7 @@ endif;
 
 $img_rev = isset($args['img_rev']) ? $args['img_rev'] : '';
 $add_class = isset($args['add_class']) ? $args['add_class'] : '';
-$img_style = $img_stretch = $img_radius = '';
+$img_style = $img_stretch = $img_cover = $img_radius = '';
 ?>
 
 <?php $add_class = isset($args['add_class']) ? $args['add_class'] : ''; ?>
@@ -30,18 +30,21 @@ $img_style = $img_stretch = $img_radius = '';
 		if( get_sub_field('img_stretch') ){
 			$img_stretch = 'img-stretch';
 		}
+		if( get_sub_field('img_cover') ){
+			$img_cover = 'img-cover';
+		}
 		if( get_sub_field('img_style') ){
 			$img_style = get_sub_field('img_style');
 		}
 		?>
 		
 		<?php if( get_sub_field('show_video') && get_sub_field('video')): ?>
-			<figure class="wp-block-video <?php echo $img_style.' '.$img_rev.' '.$img_radius.' '.$img_stretch.' '.$add_class; ?>"><video autoplay loop muted src="<?php echo esc_url(get_sub_field('video'))?>" playsinline></video></figure>
+			<figure class="wp-block-video <?php echo $img_style.' '.$img_rev.' '.$img_radius.' '.$img_stretch.' '.$img_cover.' '.$add_class; ?>"><video autoplay loop muted src="<?php echo esc_url(get_sub_field('video'))?>" playsinline></video></figure>
 		<?php else: ?>
 			<?php if( get_sub_field('img') ): ?>
 				<?php $img = get_sub_field('img'); ?>
 				<div class="img-style-wrapper <?php echo $img_style.' '.$img_rev.' '.$img_radius.' '.$img_stretch.' '.$add_class; ?>">
-					<div class="img-wrapper">
+					<div class="img-wrapper <?php echo $img_cover; ?>">
 						<img src="<?php echo esc_url($img['url']); ?>" class="img-fluid" alt="<?php echo esc_attr($img['alt']); ?>" />
 					</div>
 				</div>

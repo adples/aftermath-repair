@@ -1,0 +1,15 @@
+{
+	"name": "acf/carousel",
+	"title": "Carousel",
+	"description": "Custom block.",
+	"category": "custom-theme",
+	"keywords": ["carousel", "slider"],
+	"acf": {
+		"mode": "preview",
+		"renderTemplate": "carousel.php"
+	},
+	"supports": {
+		"anchor": true,
+		"jsx": true
+	}
+}

@@ -66,6 +66,28 @@
 			
 			&:hover{
 				text-decoration-color: $primary;
+				
+				i{
+					color: $primary;
+				}
+			}
+		}
+	}
+	
+	.footer-list-icon{
+		li{
+			a{
+				text-decoration: none;
+				
+				&:hover{
+					i{
+						color: $primary;
+					}
+				}
+			}
+			
+			i{
+				transition: color ease-in-out .3s;
 			}
 		}
 	}
@@ -79,6 +101,12 @@
 		
 		.custom-logo-link{
 			display: block;
+		}
+	}
+	
+	.footer-description{
+		@include media-breakpoint-only(xl){
+			padding-right: 4rem;
 		}
 	}
 	

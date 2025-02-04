@@ -43,27 +43,17 @@ $container = get_theme_mod( 'understrap_container_type' );
 				<div class="col-xxl-8">
 					<div class="row gx-xxl-5">
 						<div class="col-lg-5">
-							<h6 class="h5 mb-3">Areas We Serve in Texas</h6>
 							
-							<?php
-							$the_query = new WP_Query( array(
-								'post_type' => 'cities',
-								'posts_per_page' => 100, 
-								'order' => 'ASC'
-							  )
-							);
-							?>
-							
-							<ul class="footer-list-inline">
-								<?php
-								while ( $the_query->have_posts() ) :
-									$the_query->the_post();
-									$id = get_the_ID();
-								?>
-									<li id="<?php echo $id ?>"><a href="<?php echo esc_url(get_the_permalink()) ?>"><?php echo get_the_title() ?></a></li>	
-							
-								<?php endwhile; wp_reset_postdata(); ?>
-							</ul>
+							<?php if( have_rows('areas','option') ): ?>
+								<h6 class="h5 mb-3">Areas We Serve in Texas</h6>
+								<ul class="footer-list-inline">
+									<?php while( have_rows('areas','option') ): the_row(); ?>
+										<?php if( get_sub_field('area') ): ?>
+											<li><?php echo get_sub_field('area'); ?></li>
+										<?php endif; ?>
+									<?php endwhile; ?>
+								</ul>
+							<?php endif; ?>
 							
 							<?php if( have_rows('states','option') ): ?>
 								<h6 class="mb-3">We also serve several other states outside of Texas including:</h6>
@@ -81,25 +71,16 @@ $container = get_theme_mod( 'understrap_container_type' );
 							<h6 class="h5 mb-3">Foundation Repair Services</h6>
 							
 							<?php
-							$the_query = new WP_Query( array(
-								'post_parent' => 18,
-								'post_type' => 'page',
-								'post_status' => 'publish',
-								'order'   => 'ASC'
-							  )
-							);
+							wp_nav_menu( array(
+								'menu' => '4',
+								'menu_class' => 'footer-list'
+							));
 							?>
 							
+							<h6 class="h5 mb-3 mt-3">Resources</h6>
 							<ul class="footer-list">
-								<?php
-								while ( $the_query->have_posts() ) :
-									$the_query->the_post();
-									$id = get_the_ID();
-								?>
-									<li id="<?php echo $id ?>"><a href="<?php echo esc_url(get_the_permalink()) ?>"><?php echo get_the_title() ?></a></li>	
-							
-								<?php endwhile; wp_reset_postdata(); ?>
-							</ul>
+								<li><a href="<?php echo esc_url(get_permalink( get_option( 'page_for_posts' ) )); ?>">Foundation Repair Blog</a></li>
+							</ul>							
 							<hr class="footer-hr d-lg-none">
 						</div>
 						<div class="col-lg-3">
@@ -109,8 +90,9 @@ $container = get_theme_mod( 'understrap_container_type' );
 								<?php if( get_field('phone','option') ): ?>
 									<?php $phone = str_replace(array('.'), '' , get_field('phone','option')) ?>
 									<li>
-										<span><i class="fa fa-phone"></i></span>
 										<a href="<?php echo 'tel:'.$phone ?>">
+										<span><i class="fa fa-phone"></i></span>
+										
 											<?php echo get_field('phone','option') ?>
 										</a>
 									</li>
@@ -119,8 +101,9 @@ $container = get_theme_mod( 'understrap_container_type' );
 								<?php if( get_field('email','option') ): ?>
 									<?php $email = get_field('email','option') ?>
 									<li>
-										<span><i class="fa fa-envelope"></i></span>
 										<a href="<?php echo 'mailto:'.$email ?>">
+										<span><i class="fa fa-envelope"></i></span>
+										
 											<?php echo get_field('email','option') ?>
 										</a>
 									</li>
@@ -130,8 +113,9 @@ $container = get_theme_mod( 'understrap_container_type' );
 									<?php while( have_rows('social','option') ): the_row(); ?>
 										<?php if( get_sub_field('icon') && get_sub_field('url') ): ?>
 											<li>
-												<span><?php echo get_sub_field('icon') ?></span>
 												<a href="<?php echo esc_url(get_sub_field('url')) ?>">
+												<span><?php echo get_sub_field('icon') ?></span>
+												
 													<?php echo get_sub_field('platform') ?>
 												</a>
 											</li>

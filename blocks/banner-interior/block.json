@@ -1,0 +1,16 @@
+{
+	"name": "acf/banner-interior",
+	"title": "Banner Interior",
+	"description": "Custom block.",
+	"category": "custom-theme",
+	"icon": "admin-comments",
+	"keywords": ["banner", "interior", "hero"],
+	"acf": {
+		"mode": "preview",
+		"renderTemplate": "banner-interior.php"
+	},
+	"supports": {
+		"anchor": true,
+		"jsx": true
+	}
+}

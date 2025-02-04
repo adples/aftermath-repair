@@ -39,7 +39,7 @@ defined( 'ABSPATH' ) || exit;
 		<?php if( ( get_sub_field('custom') && get_sub_field('btn_link_custom') ) ||  get_sub_field('btn_link') ): ?>
 			<a href="<?php echo esc_url($url); ?>" class="btn <?php echo $class.' '.$style.' '.$size.' '.$add_class; ?>">
 			<?php if( $use_icon == true && get_sub_field('icon') && get_sub_field('icon_before')){ echo $icon.'&nbsp;&nbsp;'; } ?>
-			<span><?php echo $text; ?></span>
+			<?php echo $text; ?>
 			<?php if( $use_icon == true && get_sub_field('icon') && !get_sub_field('icon_before')){ echo '&nbsp;&nbsp;'.$icon; } ?>
 			</a>
 		<?php endif; ?>

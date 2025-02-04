@@ -1,0 +1,15 @@
+{
+	"name": "acf/cta",
+	"title": "Call to Action",
+	"description": "Custom content block.",
+	"category": "custom-theme",
+	"keywords": ["cta","call","to","action"],
+	"acf": {
+		"mode": "preview",
+		"renderTemplate": "cta.php"
+	},
+	"supports": {
+		"anchor": true,
+		"jsx": true
+	}
+}

@@ -48,3 +48,27 @@ jQuery(function( $ ) {
 		});
 	}
 });
+
+jQuery(function( $ ) {
+	$('.collapse').on('hide.bs.collapse', function() {
+  		$(this).parent().find('.fa').removeClass('fa-minus').addClass('fa-plus');
+		$(this).parent().removeClass('active-panel');
+	});
+	
+	$('.collapse').on('show.bs.collapse', function() {
+		  $(this).parent().find('.fa').removeClass('fa-plus').addClass('fa-minus');
+		  $(this).parent().addClass('active-panel');
+	});
+});
+
+
+jQuery(function( $ ) {
+	if(window.location.hash.startsWith("#tabs")){
+		const hash = window.location.hash;
+		$(hash).tab('show');
+		$('html, body').animate({
+		  scrollTop: $('#service-section').offset().top - 150
+		}, 1000);
+	}
+});
+

@@ -1,62 +1,224 @@
 .banner{
 	position: relative;
 	overflow: hidden;
-	background-color: #ccc;
-	@include bg-cover();
 	
-	@include media-breakpoint-up(xl){
-	}
-	
-	&:before{
-		//@include filter-overlay($black,.1);
-		//@include bg-cover();
-	}
-	>.container{
-		position: relative;
-	}
-	
-	.banner-inner{
-		position: relative;
-		z-index: 3;
-		padding-top: 8rem;
-		padding-bottom: 4rem;
+	&.banner-home{
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-position: bottom right;
+		background-image: url('http://aftermath-structural-repair.test/wp-content/uploads/2025/01/concrete-a.jpg');
 		
-		@include media-breakpoint-up(md){
-			//padding-top: 8rem;
-			//padding-bottom: 8rem;
+		>.container{
+			padding-bottom: 3rem;
+			
+			@include media-breakpoint-up(md){
+				padding-bottom: 3rem;
+			}
+			
+			@include media-breakpoint-up(xl){
+				padding-bottom: 4rem;
+			}
+			
+			>.row{
+				>[class*='col-']{
+					&:last-child{
+						position: relative;
+						margin-top: 2.5rem;
+						padding-top: 2rem;
+						padding-bottom: 2rem;
+						text-align: center;
+						background-color: $primary;
+						display: none;
+						
+						@include media-breakpoint-up(md){
+							display: block;
+							margin-top: 0;
+							padding-top: 0;
+							padding-bottom: 0;
+							text-align: left;
+							background-color: rgba($white, 0);
+						}
+						
+						p{
+							margin-bottom: 0;
+							color: $white;
+							
+							@include media-breakpoint-up(md){
+								color: $text;
+							}
+						}
+						
+						&:before, &:after{
+							@include filter-overlay ($primary, 1);
+							
+							@include media-breakpoint-up(md){
+								display: none;
+							}
+						}
+						
+						&:before{
+							left: -100%;
+							right: auto;
+						}
+						
+						&:after{
+							right: -100%;
+							left: auto;
+						}
+						
+						>.row{
+							@include media-breakpoint-up(lg){
+								height: 100%;
+							}
+						}
+					}
+				}
+			}
 		}
 		
-		@include media-breakpoint-up(lg){
-			padding-top: 10rem;
-			padding-bottom: 5rem;
+		.banner-title{
+			margin-bottom: 1rem;
+			color: $silver;
+			line-height: 1;
+			font-size:  2rem;
+			
+			@include media-breakpoint-up(sm){
+				font-size:  2.5rem;
+			}
+			
+			@include media-breakpoint-up(lg){
+				margin-bottom: 2rem;
+				font-size:  3.5rem;
+			}
+			
+			@include media-breakpoint-up(xl){
+				font-size:  4rem;
+			}
+			
+			@include media-breakpoint-up(xxl){
+				font-size:  4.75rem;
+			}
+			
+			span{
+				display: block;
+				color: $primary;
+			}
 		}
 		
-		@include media-breakpoint-up(xl){
-			padding-top: 12rem;
-			padding-bottom: 6rem;
+		.banner-img{
+			@include img-wrapper();
+			background-color: $primary;
+			
+			&.banner-img-1{
+				@include img-ratio(80%);
+				
+				@include media-breakpoint-up(lg){
+					@include img-ratio(100%);
+				}
+			}
+			
+			&.banner-img-2{
+				display: none;
+				
+				@include media-breakpoint-up(md){
+					display: block;
+					@include img-cover();
+				}
+			}
+			
+			&.banner-img-3{
+				display: none;
+				
+				@include media-breakpoint-up(md){
+					display: block;
+					@include img-ratio(80%);
+				}
+			}
 		}
 		
-		&:before{
+		p{
+			&.has-medium-font-size{
+				font-size: 1rem!important;
+				
+				@include media-breakpoint-up(sm){
+					font-size: 1.35rem!important;
+				}
+				
+				@include media-breakpoint-up(xl){
+					margin-bottom: 1.75rem;
+					font-size: 1.6rem!important;
+				}
+				
+				@include media-breakpoint-up(xxl){
+					font-size: 1.75rem!important;
+				}
+			}
+			
+			&.lead{
+				text-transform: uppercase;
+				font-size: 1rem;
+				
+				@include media-breakpoint-up(lg){
+					font-size: 1rem;
+				}
+				
+				@include media-breakpoint-up(xl){
+					font-size: 1.1rem;
+					line-height: 1.75;
+				}
+				
+				@include media-breakpoint-up(xxl){
+					font-size: 1.2rem;
+				}
+			}
 		}
 		
-		.banner-content{
-			position: relative;
-			z-index: 5;
+		.btn{
+			@include media-breakpoint-up(md){
+				display: block;
+			}
+			
+			span{
+				@include media-breakpoint-between(lg,xxl){
+					display: none;
+				}	
+			}
 		}
 	}
 	
 	&.banner-interior{
-	}
-	
-	.yoast-breadcrumbs{
-		span,a{
-			color: $white;
-			font-weight: 600;
-			@extend .text-shadow;
+		margin-bottom: 2rem;
+		
+		@include media-breakpoint-up(xl){
+			margin-bottom: 4rem;
 		}
 		
-		a{
-			text-decoration: underline dotted 1px $white;
+		.banner-img{
+			padding-bottom: 25%;
+			background-color: #ccc;
+			@include bg-cover();
+			
+			@include media-breakpoint-up(xl){
+				padding-bottom: 22.5%;
+			}
+			
+			@include media-breakpoint-up(xxl){
+				padding-bottom: 20%;
+			}
 		}
+	}
+}
+
+.breadcrumb-wrapper{
+	padding: .5rem 1rem;
+	background-color: $primary;
+	@include gradient-y($start-color: $primary, $end-color: #15a879, $start-percent: 33%, $end-percent: 100%); 
+	
+	a{
+		color: $white;
+		text-decoration-color: $white;
+	}
+	span{
+		color: $white;
 	}
 }
