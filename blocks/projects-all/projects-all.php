@@ -68,8 +68,8 @@ endforeach;
 					<?php $the_query->the_post(); ?>
 					<?php $id = get_the_ID(); ?>
 					
-						<div id="projectID-<?php echo $id ?>"class="col-md-6 col-xl-4 project-item">
-							<div class="project-item-inner">
+						<div id="projectID-<?php echo $id ?>"class="col-md-6 col-xxl-4 project-item">
+							<div class="project-item-inner mb-4">
 								
 								<?php if( get_field('img', $id) ): ?>
 									<?php 
@@ -85,7 +85,7 @@ endforeach;
 								
 								<div class="project-item-body text-center">
 									<?php if( get_field('title', $id) ): ?>
-										<h4 class="project-item-title">
+										<h4 class="project-item-title text-secondary">
 											<?php echo get_field('title', $id); ?>
 										</h4>
 										<?php

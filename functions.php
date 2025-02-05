@@ -292,6 +292,7 @@ add_filter( 'facetwp_facet_dropdown_show_counts', function( $return, $params ) {
 }, 10, 2 );
 
 
+
 /**
  * Clean ID string
  */
