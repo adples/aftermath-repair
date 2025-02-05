@@ -211,6 +211,11 @@ function understrap_child_register_acf_blocks() {
 	[
 		'icon' => $site_icon
 	]);
+	
+	register_block_type( __DIR__ . '/blocks/projects-all',
+	[
+		'icon' => $site_icon
+	]);
 }
 add_action( 'init', 'understrap_child_register_acf_blocks' );
 
@@ -278,6 +283,13 @@ function form_submit_button( $button, $form ) {
 	return "<button class='btn btn-secondary' id='gform_submit_button_{$form['id']}'>Send Message&nbsp;&nbsp;<i class='fa fa-angle-double-right'></i></button>";
 }
 add_filter( 'gform_submit_button', 'form_submit_button', 10, 2 );
+
+add_filter( 'facetwp_facet_dropdown_show_counts', function( $return, $params ) {
+  if ( 'project_types' == $params['facet']['name'] ) {
+	$return = false;
+  }
+  return $return;
+}, 10, 2 );
 
 
 /**

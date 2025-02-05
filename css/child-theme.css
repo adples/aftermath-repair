@@ -17530,6 +17530,78 @@ div > .step:not(:last-child) {
   color: #fff;
 }
 
+.facetwp-facet-project_types .fs-wrap {
+  position: relative;
+  width: 100%;
+  border-radius: 0;
+  cursor: pointer;
+  background-color: #fff;
+  outline: none;
+}
+.facetwp-facet-project_types .fs-wrap .fs-label-wrap {
+  border: 1px solid #2f2f2f;
+}
+.facetwp-facet-project_types .fs-wrap .fs-label-wrap .fs-label {
+  padding: 8px 22px 8px 8px;
+  font-size: 1rem;
+  line-height: 1.1;
+}
+.facetwp-facet-project_types .fs-wrap:-ms-expand {
+  display: none;
+}
+
+.facetwp-facet-project_name .facetwp-autocomplete {
+  width: 100%;
+  padding: 7px 22px 7px 8px;
+  border: solid 1px #2f2f2f;
+  line-height: 1.1;
+  font-size: 1rem;
+  font-family: inherit;
+}
+.facetwp-facet-project_name .facetwp-autocomplete-update {
+  display: none;
+}
+
+.facetwp-facet-project_location {
+  display: flex;
+  border: solid 1px #2f2f2f;
+}
+.facetwp-facet-project_location .facetwp-radio {
+  flex: 1 1 0;
+  width: 0;
+  background: none;
+  padding: 0.325rem; /* top/bottom right/left */
+  margin: 0 !important;
+  border: none;
+  border-radius: 0;
+  background-image: none !important;
+  text-align: center;
+}
+.facetwp-facet-project_location .facetwp-radio:not(:last-child) {
+  border-right: solid 1px #2f2f2f;
+}
+.facetwp-facet-project_location .facetwp-radio:hover, .facetwp-facet-project_location .post-item a:hover .facetwp-radio.btn, .facetwp-facet-project_location .post-item a:hover .wpcf7 input.facetwp-radio[type=submit], .wpcf7 .facetwp-facet-project_location .post-item a:hover input.facetwp-radio[type=submit], .post-item a:hover .facetwp-facet-project_location .facetwp-radio.btn, .post-item a:hover .facetwp-facet-project_location .wpcf7 input.facetwp-radio[type=submit], .wpcf7 .post-item a:hover .facetwp-facet-project_location input.facetwp-radio[type=submit], .facetwp-facet-project_location .post-item a:hover .woocommerce-notices-wrapper .woocommerce-message a.facetwp-radio.button, .post-item a:hover .woocommerce-notices-wrapper .woocommerce-message .facetwp-facet-project_location a.facetwp-radio.button, .facetwp-facet-project_location .woocommerce-notices-wrapper .woocommerce-message .post-item a:hover a.facetwp-radio.button, .woocommerce-notices-wrapper .woocommerce-message .post-item a:hover .facetwp-facet-project_location a.facetwp-radio.button, .facetwp-facet-project_location .post-item a:hover .woocommerce-info a.facetwp-radio.button, .post-item a:hover .woocommerce-info .facetwp-facet-project_location a.facetwp-radio.button, .facetwp-facet-project_location .woocommerce-info .post-item a:hover a.facetwp-radio.button, .woocommerce-info .post-item a:hover .facetwp-facet-project_location a.facetwp-radio.button, .facetwp-facet-project_location .facetwp-radio.checked {
+  background-image: none !important;
+  background-color: #38B085;
+  color: #fff;
+}
+.facetwp-facet-project_location .facetwp-radio .facetwp-counter {
+  display: none;
+}
+
+.btn.clear-facets, .wpcf7 input.clear-facets[type=submit], .woocommerce-notices-wrapper .woocommerce-message a.clear-facets.button, .woocommerce-info a.clear-facets.button {
+  display: block;
+  width: 100%;
+  padding: 0.4rem 1rem;
+}
+.btn.clear-facets i, .wpcf7 input.clear-facets[type=submit] i, .woocommerce-notices-wrapper .woocommerce-message a.clear-facets.button i, .woocommerce-info a.clear-facets.button i {
+  transition-duration: 0.66;
+}
+.btn.clear-facets:hover i, .wpcf7 input.clear-facets[type=submit]:hover i, .post-item a:hover .btn.clear-facets i, .post-item a:hover .wpcf7 input.clear-facets[type=submit] i, .wpcf7 .post-item a:hover input.clear-facets[type=submit] i, .woocommerce-notices-wrapper .woocommerce-message a.clear-facets.button:hover i, .post-item a:hover .woocommerce-notices-wrapper .woocommerce-message a.clear-facets.button i, .woocommerce-notices-wrapper .woocommerce-message .post-item a:hover a.clear-facets.button i, .woocommerce-info a.clear-facets.button:hover i, .post-item a:hover .woocommerce-info a.clear-facets.button i, .woocommerce-info .post-item a:hover a.clear-facets.button i {
+  transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+}
+
 .btn, .wpcf7 input[type=submit], .woocommerce-notices-wrapper .woocommerce-message a.button, .woocommerce-info a.button {
   padding: 0.65rem 1.35rem;
   border: none;

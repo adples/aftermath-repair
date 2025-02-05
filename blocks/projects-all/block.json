@@ -1,0 +1,14 @@
+{
+	"name": "acf/projects-all",
+	"title": "Display Projects",
+	"description": "Custom block.",
+	"category": "custom-theme",
+	"keywords": ["Projects","All","Portfolio"],
+	"acf": {
+		"mode": "preview",
+		"renderTemplate": "projects-all.php"
+	},
+	"supports": {
+		"anchor": true
+	}
+}
