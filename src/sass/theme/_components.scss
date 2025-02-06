@@ -299,6 +299,24 @@
 	}
 }
 
+.hr{
+	background-color: rgba($scorpion, .15);
+	margin: 2rem 0;
+	opacity: 1;
+	border: none;
+	height: 1px;
+	
+	@include media-breakpoint-up(xl){
+		margin: 4rem 0;
+	}
+	
+	&.hr-thin{
+		@include media-breakpoint-up(xl){
+			margin: 3rem 0;
+		}
+	}
+}
+
 .tab-wrapper{
 	.nav.nav-pills{
 		margin-bottom: 2rem;
