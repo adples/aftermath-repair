@@ -51,7 +51,7 @@ endforeach;
 		<button class="facetwp-flyout-open d-block w-100 d-lg-none btn btn-secondary">Show Filtering Options&nbsp;&nbsp;<i class="fa fa-angle-double-right"></i></button>
 		<div class="facetwp-flyout-tpl">
 		  {content}
-		  <button onclick="FWP.reset()" class="btn btn-secondary clear-facets">Clear All Filters&nbsp;&nbsp;<i class="fa fa-times"></i></button>
+		  <button onclick="FWP.reset()" class="btn clear-facets">Clear Filters&nbsp;&nbsp;<i class="fa fa-times"></i></button>
 		</div>
 		
 		<div class="d-none d-lg-block">
@@ -64,7 +64,7 @@ endforeach;
 			<h4 class="h5 text-secondary">Project Location:</h4>
 			<?php echo facetwp_display( 'facet', 'project_location' ); ?>
 			
-			<button onclick="FWP.reset()" class="btn btn-secondary clear-facets">Clear All Filters&nbsp;&nbsp;<i class="fa fa-times"></i></button>
+			<button onclick="FWP.reset()" class="btn clear-facets">Clear Filters&nbsp;&nbsp;<i class="fa fa-times"></i></button>
 		</div>
 	</div>
 	<div class="col-lg-8 col-xl-9">

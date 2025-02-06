@@ -80,6 +80,10 @@
 			position: static;
 		}
 	}
+	
+	&.img-tab{
+		@include img-ratio(33%);
+	}
 }
 
 .img-stretch{

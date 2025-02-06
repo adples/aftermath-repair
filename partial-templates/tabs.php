@@ -50,10 +50,13 @@ defined( 'ABSPATH' ) || exit;
 					<div class="tab-pane fade <?php if($x==1){echo 'show active';} ?>" id="<?php echo $tab_id.'-pane'; ?>" role="tabpanel" aria-labelledby="<?php echo $tab_id; ?>" tabindex="0">
 						<div class="row">
 							<div class="col-12">
-								<?php  get_template_part( 'partial-templates/image' ); ?>
 							</div>
 							<div class="col-12">
 								<div class="ps-lg-4">
+									<div class="mb-3">
+										<?php  get_template_part( 'partial-templates/image', null, array( 'tab' => true ) ); ?>
+									</div>
+									
 									<?php  get_template_part( 'partial-templates/heading' ); ?>
 									
 									<?php if (get_sub_field('text')){

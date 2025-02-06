@@ -108,7 +108,7 @@ hr {
   opacity: 0.25;
 }
 
-h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1 {
+h6, .h6, h5, .h5, h4, .h4, .flyout-row h3, .flyout-row .h3, h3, .h3, h2, .h2, h1, .h1 {
   margin-top: 0;
   margin-bottom: 0.5rem;
   font-weight: 500;
@@ -142,11 +142,11 @@ h3, .h3 {
   }
 }
 
-h4, .h4 {
+h4, .h4, .flyout-row h3, .flyout-row .h3 {
   font-size: calc(1.275rem + 0.3vw);
 }
 @media (min-width: 1200px) {
-  h4, .h4 {
+  h4, .h4, .flyout-row h3, .flyout-row .h3 {
     font-size: 1.5rem;
   }
 }
@@ -17622,21 +17622,29 @@ div > .step:not(:last-child) {
 }
 
 .btn.clear-facets, .wpcf7 input.clear-facets[type=submit], .woocommerce-notices-wrapper .woocommerce-message a.clear-facets.button, .woocommerce-info a.clear-facets.button {
-  display: block;
-  width: 100%;
   padding: 0.4rem 1rem;
+  border: solid 1px #2f2f2f;
+  background-color: #919090;
+  color: #fff;
 }
 .btn.clear-facets i, .wpcf7 input.clear-facets[type=submit] i, .woocommerce-notices-wrapper .woocommerce-message a.clear-facets.button i, .woocommerce-info a.clear-facets.button i {
-  transition-duration: 0.66;
+  transition-duration: 0.75;
+}
+.btn.clear-facets:hover, .wpcf7 input.clear-facets[type=submit]:hover, .post-item a:hover .btn.clear-facets, .post-item a:hover .wpcf7 input.clear-facets[type=submit], .wpcf7 .post-item a:hover input.clear-facets[type=submit], .woocommerce-notices-wrapper .woocommerce-message a.clear-facets.button:hover, .post-item a:hover .woocommerce-notices-wrapper .woocommerce-message a.clear-facets.button, .woocommerce-notices-wrapper .woocommerce-message .post-item a:hover a.clear-facets.button, .woocommerce-info a.clear-facets.button:hover, .post-item a:hover .woocommerce-info a.clear-facets.button, .woocommerce-info .post-item a:hover a.clear-facets.button {
+  background-color: #2f2f2f;
 }
 .btn.clear-facets:hover i, .wpcf7 input.clear-facets[type=submit]:hover i, .post-item a:hover .btn.clear-facets i, .post-item a:hover .wpcf7 input.clear-facets[type=submit] i, .wpcf7 .post-item a:hover input.clear-facets[type=submit] i, .woocommerce-notices-wrapper .woocommerce-message a.clear-facets.button:hover i, .post-item a:hover .woocommerce-notices-wrapper .woocommerce-message a.clear-facets.button i, .woocommerce-notices-wrapper .woocommerce-message .post-item a:hover a.clear-facets.button i, .woocommerce-info a.clear-facets.button:hover i, .post-item a:hover .woocommerce-info a.clear-facets.button i, .woocommerce-info .post-item a:hover a.clear-facets.button i {
-  transform: rotate(180deg);
-  -webkit-transform: rotate(180deg);
+  transform: rotate(90deg);
+  -webkit-transform: rotate(90deg);
 }
 
 body .facetwp-flyout {
   right: 0;
   transform: translateX(100%);
+}
+
+.flyout-row h3, .flyout-row .h3 {
+  color: #2f2f2f;
 }
 
 .btn, .wpcf7 input[type=submit], .woocommerce-notices-wrapper .woocommerce-message a.button, .woocommerce-info a.button {
@@ -17777,6 +17785,17 @@ body .facetwp-flyout {
   height: 100%;
   width: 100%;
   position: static;
+}
+.img-wrapper.img-tab {
+  padding-bottom: 33%;
+}
+.img-wrapper.img-tab img {
+  position: absolute;
+  display: block;
+  -o-object-fit: cover;
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
 }
 
 @media (min-width: 992px) {

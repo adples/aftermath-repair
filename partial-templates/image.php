@@ -14,6 +14,13 @@ else:
 	$logo = '';
 endif;
 
+if ( isset($args['tab']) ):
+	$tab_img = 'img-tab';
+else:
+	$tab_img = '';
+endif;
+
+
 $img_rev = isset($args['img_rev']) ? $args['img_rev'] : '';
 $add_class = isset($args['add_class']) ? $args['add_class'] : '';
 $img_style = $img_stretch = $img_cover = $img_radius = '';
@@ -44,7 +51,7 @@ $img_style = $img_stretch = $img_cover = $img_radius = '';
 			<?php if( get_sub_field('img') ): ?>
 				<?php $img = get_sub_field('img'); ?>
 				<div class="img-style-wrapper <?php echo $img_style.' '.$img_rev.' '.$img_radius.' '.$img_stretch.' '.$add_class; ?>">
-					<div class="img-wrapper <?php echo $img_cover; ?>">
+					<div class="img-wrapper <?php echo $img_cover.' '.$tab_img; ?>">
 						<img src="<?php echo esc_url($img['url']); ?>" class="img-fluid" alt="<?php echo esc_attr($img['alt']); ?>" />
 					</div>
 				</div>
