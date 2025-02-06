@@ -46,7 +46,7 @@ endforeach;
 ?>
 
 <div class="row mt-4">
-	<div class="col-lg-3 order-lg-1">
+	<div class="col-lg-4 order-lg-1 col-xl-3">
 		<h4 class="h5 text-secondary">Project Search:</h4>
 		<?php echo facetwp_display( 'facet', 'project_name' ); ?>
 		
@@ -60,8 +60,8 @@ endforeach;
 		
 		<button onclick="FWP.reset()" class="btn btn-secondary clear-facets">Clear All Filters&nbsp;&nbsp;<i class="fa fa-times"></i></button>
 	</div>
-	<div class="col-lg-9">
-		<div class="pe-xl-5 facet-results-wrapper">
+	<div class="col-lg-8 col-xl-9">
+		<div class="pe-lg-4 pe-xl-5 facet-results-wrapper">
 			<hr class="hr mt-0 mb-5">
 			<div class="row project-row justify-content-xl-center facetwp-template">
 				
