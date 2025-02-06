@@ -17634,6 +17634,11 @@ div > .step:not(:last-child) {
   -webkit-transform: rotate(180deg);
 }
 
+body .facetwp-flyout {
+  right: 0;
+  transform: translateX(100%);
+}
+
 .btn, .wpcf7 input[type=submit], .woocommerce-notices-wrapper .woocommerce-message a.button, .woocommerce-info a.button {
   padding: 0.65rem 1.35rem;
   border: none;
