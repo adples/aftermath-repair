@@ -16,6 +16,8 @@ if ( ! empty( $block['anchor'] ) ) {
 $add_class = '';
 if ( ! empty( $block['className'] ) ) {
 	$add_class = $block['className'];
+} elseif (! empty($args['class'] )){
+	$add_class = $args['class'];
 }
 
 ?>
@@ -42,10 +44,12 @@ if ( ! empty( $block['className'] ) ) {
 						<?php $i = 0; ?>
 						<?php foreach( $gallery as $img ): ?>
 							<?php $img_url = $img['url']; ?>
+							<?php $md_lg =  wp_get_attachment_image_url($img['id'], 'medium_large'); ?>
+							<?php $lg =  wp_get_attachment_image_url($img['id'], 'large'); ?>
 							<?php $img_alt = $img['alt']; ?>
 							<?php if($i == 0): $active = 'active'; else: $active = ''; endif; ?>
 							<div class="carousel-item <?php echo $active ?>">
-								<img src="<?php echo $img_url ?>" class="d-block w-100" alt="<?php echo $img_alt ?>">
+								<img src="<?php echo esc_url($lg) ?>" class="d-block w-100" alt="<?php echo $img_alt ?>">
 							</div>
 						<?php $i++; endforeach; ?>
 					</div>

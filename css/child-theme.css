@@ -17370,6 +17370,12 @@ div > .step:not(:last-child) {
   }
 }
 
+.badge.badge-default {
+  padding: 0.35rem 0.75rem;
+  font-size: 0.925rem;
+  border-radius: 0;
+}
+
 .section-icon {
   position: absolute;
   left: 50%;
@@ -17548,6 +17554,11 @@ div > .step:not(:last-child) {
   color: #fff;
 }
 
+.project-item .project-item-inner {
+  display: block;
+  width: 100%;
+  text-decoration: none !important;
+}
 .project-item .project-item-inner .img-wrapper {
   box-shadow: 0 0 45px 0 rgba(0, 0, 0, 0);
   transition: box-shadow ease-in-out 0.3s;
@@ -17560,6 +17571,21 @@ div > .step:not(:last-child) {
 }
 .project-item .project-item-inner:hover .btn i, .project-item .project-item-inner:hover .wpcf7 input[type=submit] i, .wpcf7 .project-item .project-item-inner:hover input[type=submit] i, .project-item .post-item a:hover .project-item-inner.btn .btn i, .project-item .post-item a:hover .wpcf7 input.project-item-inner[type=submit] .btn i, .wpcf7 .project-item .post-item a:hover input.project-item-inner[type=submit] .btn i, .project-item .post-item a:hover .project-item-inner.btn .wpcf7 input[type=submit] i, .wpcf7 .project-item .post-item a:hover .project-item-inner.btn input[type=submit] i, .project-item .post-item a:hover .wpcf7 input.project-item-inner[type=submit] input[type=submit] i, .wpcf7 .project-item .post-item a:hover input.project-item-inner[type=submit] input[type=submit] i, .post-item a:hover .project-item .project-item-inner.btn .btn i, .post-item a:hover .project-item .wpcf7 input.project-item-inner[type=submit] .btn i, .wpcf7 .post-item a:hover .project-item input.project-item-inner[type=submit] .btn i, .post-item a:hover .project-item .project-item-inner.btn .wpcf7 input[type=submit] i, .wpcf7 .post-item a:hover .project-item .project-item-inner.btn input[type=submit] i, .post-item a:hover .project-item .wpcf7 input.project-item-inner[type=submit] input[type=submit] i, .wpcf7 .post-item a:hover .project-item input.project-item-inner[type=submit] input[type=submit] i, .project-item .post-item a:hover .woocommerce-notices-wrapper .woocommerce-message a.project-item-inner.button .btn i, .project-item .post-item a:hover .woocommerce-notices-wrapper .woocommerce-message a.project-item-inner.button .wpcf7 input[type=submit] i, .wpcf7 .project-item .post-item a:hover .woocommerce-notices-wrapper .woocommerce-message a.project-item-inner.button input[type=submit] i, .post-item a:hover .woocommerce-notices-wrapper .woocommerce-message .project-item a.project-item-inner.button .btn i, .post-item a:hover .woocommerce-notices-wrapper .woocommerce-message .project-item a.project-item-inner.button .wpcf7 input[type=submit] i, .wpcf7 .post-item a:hover .woocommerce-notices-wrapper .woocommerce-message .project-item a.project-item-inner.button input[type=submit] i, .project-item .woocommerce-notices-wrapper .woocommerce-message .post-item a:hover a.project-item-inner.button .btn i, .project-item .woocommerce-notices-wrapper .woocommerce-message .post-item a:hover a.project-item-inner.button .wpcf7 input[type=submit] i, .wpcf7 .project-item .woocommerce-notices-wrapper .woocommerce-message .post-item a:hover a.project-item-inner.button input[type=submit] i, .woocommerce-notices-wrapper .woocommerce-message .post-item a:hover .project-item a.project-item-inner.button .btn i, .woocommerce-notices-wrapper .woocommerce-message .post-item a:hover .project-item a.project-item-inner.button .wpcf7 input[type=submit] i, .wpcf7 .woocommerce-notices-wrapper .woocommerce-message .post-item a:hover .project-item a.project-item-inner.button input[type=submit] i, .project-item .post-item a:hover .woocommerce-info a.project-item-inner.button .btn i, .project-item .post-item a:hover .woocommerce-info a.project-item-inner.button .wpcf7 input[type=submit] i, .wpcf7 .project-item .post-item a:hover .woocommerce-info a.project-item-inner.button input[type=submit] i, .post-item a:hover .woocommerce-info .project-item a.project-item-inner.button .btn i, .post-item a:hover .woocommerce-info .project-item a.project-item-inner.button .wpcf7 input[type=submit] i, .wpcf7 .post-item a:hover .woocommerce-info .project-item a.project-item-inner.button input[type=submit] i, .project-item .woocommerce-info .post-item a:hover a.project-item-inner.button .btn i, .project-item .woocommerce-info .post-item a:hover a.project-item-inner.button .wpcf7 input[type=submit] i, .wpcf7 .project-item .woocommerce-info .post-item a:hover a.project-item-inner.button input[type=submit] i, .woocommerce-info .post-item a:hover .project-item a.project-item-inner.button .btn i, .woocommerce-info .post-item a:hover .project-item a.project-item-inner.button .wpcf7 input[type=submit] i, .wpcf7 .woocommerce-info .post-item a:hover .project-item a.project-item-inner.button input[type=submit] i, .project-item .project-item-inner:hover .woocommerce-notices-wrapper .woocommerce-message a.button i, .project-item .post-item a:hover .project-item-inner.btn .woocommerce-notices-wrapper .woocommerce-message a.button i, .project-item .post-item a:hover .wpcf7 input.project-item-inner[type=submit] .woocommerce-notices-wrapper .woocommerce-message a.button i, .wpcf7 .project-item .post-item a:hover input.project-item-inner[type=submit] .woocommerce-notices-wrapper .woocommerce-message a.button i, .post-item a:hover .project-item .project-item-inner.btn .woocommerce-notices-wrapper .woocommerce-message a.button i, .post-item a:hover .project-item .wpcf7 input.project-item-inner[type=submit] .woocommerce-notices-wrapper .woocommerce-message a.button i, .wpcf7 .post-item a:hover .project-item input.project-item-inner[type=submit] .woocommerce-notices-wrapper .woocommerce-message a.button i, .project-item .post-item a:hover .woocommerce-notices-wrapper .woocommerce-message a.project-item-inner.button .woocommerce-notices-wrapper .woocommerce-message a.button i, .project-item .woocommerce-notices-wrapper .woocommerce-message .post-item a:hover a.project-item-inner.button .woocommerce-notices-wrapper .woocommerce-message a.button i, .project-item .post-item a:hover .woocommerce-info a.project-item-inner.button .woocommerce-notices-wrapper .woocommerce-message a.button i, .project-item .woocommerce-info .post-item a:hover a.project-item-inner.button .woocommerce-notices-wrapper .woocommerce-message a.button i, .woocommerce-notices-wrapper .woocommerce-message .project-item .project-item-inner:hover a.button i, .woocommerce-notices-wrapper .woocommerce-message .project-item .post-item a:hover .project-item-inner.btn a.button i, .woocommerce-notices-wrapper .woocommerce-message .project-item .post-item a:hover .wpcf7 input.project-item-inner[type=submit] a.button i, .wpcf7 .woocommerce-notices-wrapper .woocommerce-message .project-item .post-item a:hover input.project-item-inner[type=submit] a.button i, .post-item a:hover .woocommerce-notices-wrapper .woocommerce-message .project-item .project-item-inner.btn a.button i, .post-item a:hover .woocommerce-notices-wrapper .woocommerce-message .project-item .wpcf7 input.project-item-inner[type=submit] a.button i, .wpcf7 .post-item a:hover .woocommerce-notices-wrapper .woocommerce-message .project-item input.project-item-inner[type=submit] a.button i, .post-item a:hover .woocommerce-notices-wrapper .woocommerce-message .project-item a.project-item-inner.button a.button i, .woocommerce-notices-wrapper .woocommerce-message .project-item .post-item a:hover a.project-item-inner.button a.button i, .woocommerce-notices-wrapper .woocommerce-message .post-item a:hover .project-item a.project-item-inner.button a.button i, .project-item .project-item-inner:hover .woocommerce-info a.button i, .project-item .post-item a:hover .project-item-inner.btn .woocommerce-info a.button i, .project-item .post-item a:hover .wpcf7 input.project-item-inner[type=submit] .woocommerce-info a.button i, .wpcf7 .project-item .post-item a:hover input.project-item-inner[type=submit] .woocommerce-info a.button i, .post-item a:hover .project-item .project-item-inner.btn .woocommerce-info a.button i, .post-item a:hover .project-item .wpcf7 input.project-item-inner[type=submit] .woocommerce-info a.button i, .wpcf7 .post-item a:hover .project-item input.project-item-inner[type=submit] .woocommerce-info a.button i, .project-item .post-item a:hover .woocommerce-notices-wrapper .woocommerce-message a.project-item-inner.button .woocommerce-info a.button i, .project-item .woocommerce-notices-wrapper .woocommerce-message .post-item a:hover a.project-item-inner.button .woocommerce-info a.button i, .project-item .post-item a:hover .woocommerce-info a.project-item-inner.button .woocommerce-info a.button i, .project-item .woocommerce-info .post-item a:hover a.project-item-inner.button .woocommerce-info a.button i, .woocommerce-info .project-item .project-item-inner:hover a.button i, .woocommerce-info .project-item .post-item a:hover .project-item-inner.btn a.button i, .woocommerce-info .project-item .post-item a:hover .wpcf7 input.project-item-inner[type=submit] a.button i, .wpcf7 .woocommerce-info .project-item .post-item a:hover input.project-item-inner[type=submit] a.button i, .post-item a:hover .woocommerce-info .project-item .project-item-inner.btn a.button i, .post-item a:hover .woocommerce-info .project-item .wpcf7 input.project-item-inner[type=submit] a.button i, .wpcf7 .post-item a:hover .woocommerce-info .project-item input.project-item-inner[type=submit] a.button i, .post-item a:hover .woocommerce-info .project-item a.project-item-inner.button a.button i, .woocommerce-info .project-item .post-item a:hover a.project-item-inner.button a.button i, .woocommerce-info .post-item a:hover .project-item a.project-item-inner.button a.button i {
   left: 4px;
+}
+
+.project-carousel .carousel-item {
+  position: relative;
+  display: block;
+  width: 100%;
+  padding-bottom: 66%;
+}
+.project-carousel .carousel-item img {
+  position: absolute;
+  display: block;
+  -o-object-fit: cover;
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
 }
 
 .facetwp-facet-project_types .fs-wrap {
@@ -18028,7 +18054,12 @@ body .facetwp-flyout {
 }
 
 .widget-area {
-  margin-top: 5.5rem;
+  margin-top: 2rem;
+}
+@media (min-width: 992px) {
+  .widget-area {
+    margin-top: 5.5rem;
+  }
 }
 .widget-area .wp-block-latest-posts li:not(:last-child) {
   border-bottom: solid 1px rgba(94, 87, 94, 0.15);

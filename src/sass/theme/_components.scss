@@ -512,6 +512,14 @@ div >.step{
 	}
 }
 
+.badge{
+	&.badge-default{
+		padding: .35rem .75rem;
+		font-size: .925rem;
+		border-radius: 0;
+	}
+}
+
 .section-icon{
 	position: absolute;
 	left: 50%;

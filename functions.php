@@ -44,7 +44,7 @@ function theme_enqueue_styles() {
 		wp_enqueue_script( 'comment-reply' );
 	}
 	
-	if( is_page( 211 ) ){
+	if( is_singular( 'projects' ) ){
 		wp_enqueue_script( 'fancybox-js', get_stylesheet_directory_uri() . '/src/fancybox/fancybox.umd.js', array(), $the_theme->get( 'Version' ), true );
 	}
 }
@@ -291,6 +291,17 @@ add_filter( 'facetwp_facet_dropdown_show_counts', function( $return, $params ) {
   return $return;
 }, 10, 2 );
 
+
+
+add_filter( 'facetwp_index_row', function( $params, $class ) {
+  if ( 'project_location' == $params['facet_name'] ) { // Replace 'my_facet_name' with the name of your facet
+	$included_terms = [ 'Texas', 'Louisiana' ]; // Replace with the display value (not the slug) of your excluded terms
+	if ( ! in_array( $params['facet_display_value'], $included_terms ) ) {
+	  $params['facet_value'] = '';
+	}
+  }
+  return $params;
+}, 10, 2 );
 
 
 /**

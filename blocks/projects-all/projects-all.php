@@ -77,18 +77,16 @@ endforeach;
 					<?php $id = get_the_ID(); ?>
 					
 						<div id="projectID-<?php echo $id ?>"class="col-md-6 col-xxl-4 project-item xxx">
-							<div class="project-item-inner mb-4">
+							<a href="<?php echo esc_url(get_the_permalink()) ?>" class="project-item-inner mb-4">
 								
 								<?php if( get_field('img', $id) ): ?>
-									<?php 
+									<?php
 									$img = get_field('img', $id);
+									$md_lg =  wp_get_attachment_image_url($img['id'], 'medium_large');
 									?>
-								
-								
-								<div class="img-wrapper img-standard ratio img-cover mb-3">
-										<img src="<?php echo esc_url($img['url']); ?>" class="img-fluid" alt="<?php echo esc_attr($img['alt']); ?>" />
-								</div>
-								
+									<div class="img-wrapper img-standard ratio img-cover">
+										<img src="<?php echo esc_url($md_lg); ?>" class="img-fluid" alt="<?php echo esc_attr($img['alt']); ?>" />
+									</div>
 								<?php endif; ?>
 								
 								<div class="project-item-body text-center">
@@ -112,7 +110,7 @@ endforeach;
 										
 									<?php endif; ?>
 								</div>
-							</div>
+							</a>
 						</div>
 					
 					<?php $z++; ?>

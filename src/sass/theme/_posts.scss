@@ -54,7 +54,11 @@
 
 
 .widget-area{
-	margin-top: 5.5rem;
+	margin-top: 2rem;
+	
+	@include media-breakpoint-up(lg){
+		margin-top: 5.5rem;
+	}
 	
 	.wp-block-latest-posts{
 		

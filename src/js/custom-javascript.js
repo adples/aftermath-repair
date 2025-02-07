@@ -35,17 +35,8 @@ jQuery(function( $ ) {
 });
 
 jQuery(function( $ ) {
-	if( $('.project-row').length ) {
-		Fancybox.bind("[data-fancybox]", {
-			on: {
-				reveal: (fancybox, slide) => {
-					$('.modal').hide();
-					$('.modal-backdrop').remove();
-					$('body').removeClass('modal-open');
-					$('body').removeAttr('style');
-				},
-			  },
-		});
+	if( $('.project-carousel').length ) {
+		Fancybox.bind("[data-fancybox]");
 	}
 });
 
