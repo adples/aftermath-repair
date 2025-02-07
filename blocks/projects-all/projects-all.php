@@ -84,7 +84,7 @@ endforeach;
 									$img = get_field('img', $id);
 									$md_lg =  wp_get_attachment_image_url($img['id'], 'medium_large');
 									?>
-									<div class="img-wrapper img-standard ratio img-cover">
+									<div class="img-wrapper img-standard ratio img-cover mb-3">
 										<img src="<?php echo esc_url($md_lg); ?>" class="img-fluid" alt="<?php echo esc_attr($img['alt']); ?>" />
 									</div>
 								<?php endif; ?>
