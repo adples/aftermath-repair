@@ -117,7 +117,7 @@ if ( isset($project_location) && $project_location !== false) {
 		</div>
 		<div class="col-lg-3 col-xl-4">
 			<div class="widget-area">
-				<h3 class="h3 text-secondary">Project Details</h3>
+				<h3 class="h3 text-secondary mb-3">Project Details</h3>
 				<?php if ( isset($project_type) && $project_type !== false) : ?>
 					<?php foreach ($project_type as $type) : ?>
 						<span class="badge bg-primary badge-default"><?php echo $type->name; ?></span>
@@ -125,7 +125,7 @@ if ( isset($project_location) && $project_location !== false) {
 				<?php endif; ?>
 				
 				<?php if (get_field('desc')): ?>
-					<div class="mt-3">
+					<div class="mt-3 mt-xl-4">
 						<?php echo get_field('desc') ?>
 					</div>
 				<?php endif ?>
