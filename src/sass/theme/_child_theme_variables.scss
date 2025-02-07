@@ -105,9 +105,12 @@ $mw-sm: map-get($container-max-widths, "sm");
 
 @mixin img-ratio ($ratio: 66%){
 	padding-bottom: $ratio;
+	overflow: hidden;
 	
 	img{
-		@include cover();
+		&:not(.loader-icon){
+			@include cover();
+		}
 	}
 }
 
@@ -117,6 +120,18 @@ $mw-sm: map-get($container-max-widths, "sm");
 	img{
 		@include cover();
 	}
+}
+
+@mixin video-cover{
+	height: 56.25vw;
+	  left: 50%;
+	  min-height: 101%;
+	  min-width: 101%;
+	  transform: translate(-50%,-50%);
+	  position: absolute;
+	  top: 50%;
+	  width: 177.77777778vh;
+	  z-index: 1;
 }
 
 

@@ -46,6 +46,7 @@ function theme_enqueue_styles() {
 	
 	if( is_singular( 'projects' ) ){
 		wp_enqueue_script( 'fancybox-js', get_stylesheet_directory_uri() . '/src/fancybox/fancybox.umd.js', array(), $the_theme->get( 'Version' ), true );
+		wp_enqueue_script( 'vimeo-api', 'https://player.vimeo.com/api/player.js', array(), true );
 	}
 }
 add_action( 'wp_enqueue_scripts', 'theme_enqueue_styles' );

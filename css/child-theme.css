@@ -16798,8 +16798,9 @@ body a {
 }
 .banner.banner-home .banner-img.banner-img-1 {
   padding-bottom: 80%;
+  overflow: hidden;
 }
-.banner.banner-home .banner-img.banner-img-1 img {
+.banner.banner-home .banner-img.banner-img-1 img:not(.loader-icon) {
   position: absolute;
   display: block;
   -o-object-fit: cover;
@@ -16810,8 +16811,9 @@ body a {
 @media (min-width: 992px) {
   .banner.banner-home .banner-img.banner-img-1 {
     padding-bottom: 100%;
+    overflow: hidden;
   }
-  .banner.banner-home .banner-img.banner-img-1 img {
+  .banner.banner-home .banner-img.banner-img-1 img:not(.loader-icon) {
     position: absolute;
     display: block;
     -o-object-fit: cover;
@@ -16844,8 +16846,9 @@ body a {
   .banner.banner-home .banner-img.banner-img-3 {
     display: block;
     padding-bottom: 80%;
+    overflow: hidden;
   }
-  .banner.banner-home .banner-img.banner-img-3 img {
+  .banner.banner-home .banner-img.banner-img-3 img:not(.loader-icon) {
     position: absolute;
     display: block;
     -o-object-fit: cover;
@@ -17578,8 +17581,9 @@ div > .step:not(:last-child) {
   display: block;
   width: 100%;
   padding-bottom: 66%;
+  overflow: hidden;
 }
-.project-carousel .carousel-item img {
+.project-carousel .carousel-item img:not(.loader-icon) {
   position: absolute;
   display: block;
   -o-object-fit: cover;
@@ -17588,6 +17592,103 @@ div > .step:not(:last-child) {
   width: 100%;
 }
 
+.project-video-wrapper {
+  position: relative;
+  display: block;
+  width: 100%;
+  padding-bottom: 66%;
+  overflow: hidden;
+  background-color: #e7e6e7;
+}
+.project-video-wrapper img:not(.loader-icon) {
+  position: absolute;
+  display: block;
+  -o-object-fit: cover;
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+.project-video-wrapper:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #e7e6e7;
+  content: "";
+  z-index: 5;
+  transition: opacity ease-in-out 0.33s;
+}
+.project-video-wrapper.loaded:before {
+  opacity: 0;
+}
+.project-video-wrapper iframe {
+  height: 56.25vw;
+  left: 50%;
+  min-height: 101%;
+  min-width: 101%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  top: 50%;
+  width: 177.77777778vh;
+  z-index: 1;
+}
+.project-video-wrapper .loader {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  text-align: center;
+  z-index: 8;
+}
+.project-video-wrapper .loader .loader-icon {
+  max-width: 200px;
+}
+
+.loading {
+  margin-top: 1rem;
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-align: center;
+  opacity: 0.75;
+}
+.loading span {
+  display: inline-block;
+  margin: 0 -0.05em;
+}
+
+.loading03 span {
+  margin: 0 -0.075em;
+  animation: loading03 0.7s infinite alternate;
+}
+.loading03 span:nth-child(2) {
+  animation-delay: 0.1s;
+}
+.loading03 span:nth-child(3) {
+  animation-delay: 0.2s;
+}
+.loading03 span:nth-child(4) {
+  animation-delay: 0.3s;
+}
+.loading03 span:nth-child(5) {
+  animation-delay: 0.4s;
+}
+.loading03 span:nth-child(6) {
+  animation-delay: 0.5s;
+}
+.loading03 span:nth-child(7) {
+  animation-delay: 0.6s;
+}
+
+@keyframes loading03 {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0.8);
+  }
+}
 .facetwp-facet-project_types .fs-wrap {
   position: relative;
   width: 100%;
@@ -17814,8 +17915,9 @@ body .facetwp-flyout {
 }
 .img-wrapper.img-tab {
   padding-bottom: 33%;
+  overflow: hidden;
 }
-.img-wrapper.img-tab img {
+.img-wrapper.img-tab img:not(.loader-icon) {
   position: absolute;
   display: block;
   -o-object-fit: cover;

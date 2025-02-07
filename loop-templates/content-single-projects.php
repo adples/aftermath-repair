@@ -85,8 +85,13 @@ if ( isset($project_location) && $project_location !== false) {
 				
 				</div><!-- .entry-meta -->
 				
-				<?php get_template_part( 'partial-templates/carousel', null, array( 'class' => 'project-carousel' ) ); ?>
-				
+				<?php 
+				if( get_field('show_video') && get_field('video') ):
+					get_template_part( 'partial-templates/vimeo-video' );
+				else:
+					get_template_part( 'partial-templates/carousel', null, array( 'class' => 'project-carousel' ) );
+				endif;
+				?>
 				
 				
 				<div class="breadcrumb-wrapper">

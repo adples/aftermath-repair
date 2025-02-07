@@ -6965,7 +6965,7 @@
 	  }).resize();
 	});
 	jQuery(function ($) {
-	  if ($('.project-carousel').length) {
+	  if ($('.project-carousel').length || $('.project-video-wrapper').length) {
 	    Fancybox.bind("[data-fancybox]");
 	  }
 	});
@@ -6986,6 +6986,20 @@
 	    $('html, body').animate({
 	      scrollTop: $('#service-section').offset().top - 150
 	    }, 1000);
+	  }
+	});
+	jQuery(function ($) {
+	  if ($('.project-video-wrapper').length) {
+	    var iframe = $('#vimeo');
+	    var player = new Vimeo.Player(iframe);
+	    player.on('play', function () {
+	      $('.project-video-wrapper').addClass('loadbar');
+	      setTimeout(function () {
+	        $('.project-video-wrapper .loader').fadeOut(500, function () {
+	          $('.project-video-wrapper').addClass('loaded');
+	        });
+	      }, 100);
+	    });
 	  }
 	});
 

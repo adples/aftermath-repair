@@ -115,6 +115,48 @@
                     "preview_size": "medium"
                 }
             ]
+        },
+        {
+            "key": "field_67a6387636e63",
+            "label": "Show Video",
+            "name": "show_video",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "allow_in_bindings": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_67a6388c36e64",
+            "label": "Vimeo ID",
+            "name": "video",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
         }
     ],
     "location": [
@@ -135,5 +177,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1738936598
+    "modified": 1738947220
 }
