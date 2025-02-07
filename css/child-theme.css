@@ -18061,6 +18061,11 @@ body .facetwp-flyout {
     margin-top: 5.5rem;
   }
 }
+@media (min-width: 1560px) {
+  .widget-area .h3 {
+    font-size: 2rem;
+  }
+}
 .widget-area .wp-block-latest-posts li:not(:last-child) {
   border-bottom: solid 1px rgba(94, 87, 94, 0.15);
 }

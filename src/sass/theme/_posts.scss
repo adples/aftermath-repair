@@ -60,6 +60,12 @@
 		margin-top: 5.5rem;
 	}
 	
+	.h3{
+		@include media-breakpoint-up(xxl){
+			font-size: 2rem;
+		}
+	}
+	
 	.wp-block-latest-posts{
 		
 		li{
