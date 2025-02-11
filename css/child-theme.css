@@ -17914,7 +17914,7 @@ body .facetwp-flyout {
   position: static;
 }
 .img-wrapper.img-tab {
-  padding-bottom: 33%;
+  padding-bottom: 100%;
   overflow: hidden;
 }
 .img-wrapper.img-tab img:not(.loader-icon) {

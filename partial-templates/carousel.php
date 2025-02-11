@@ -14,7 +14,7 @@ if ( ! empty( $block['anchor'] ) ) {
 }
  
 $add_class = '';
-if ( ! empty( $block['className'] ) ) {
+if (!empty($block['className'])) {
 	$add_class = $block['className'];
 } elseif (! empty($args['class'] )){
 	$add_class = $args['class'];
