@@ -82,7 +82,11 @@
 	}
 	
 	&.img-tab{
-		@include img-ratio(100%);
+		@include img-ratio(66%);
+		
+		@include media-breakpoint-up(xl){
+			padding-bottom: 100%;
+		}
 	}
 }
 

@@ -17914,7 +17914,7 @@ body .facetwp-flyout {
   position: static;
 }
 .img-wrapper.img-tab {
-  padding-bottom: 100%;
+  padding-bottom: 66%;
   overflow: hidden;
 }
 .img-wrapper.img-tab img:not(.loader-icon) {
@@ -17924,6 +17924,11 @@ body .facetwp-flyout {
   object-fit: cover;
   height: 100%;
   width: 100%;
+}
+@media (min-width: 1300px) {
+  .img-wrapper.img-tab {
+    padding-bottom: 100%;
+  }
 }
 
 @media (min-width: 992px) {

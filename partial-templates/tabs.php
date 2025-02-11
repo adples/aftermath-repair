@@ -49,13 +49,13 @@ defined( 'ABSPATH' ) || exit;
 					?>
 					<div class="tab-pane fade <?php if($x==1){echo 'show active';} ?>" id="<?php echo $tab_id.'-pane'; ?>" role="tabpanel" aria-labelledby="<?php echo $tab_id; ?>" tabindex="0">
 						<div class="row gx-xl-5">
-							<div class="col-lg-4 order-lg-1">
+							<div class="col-xl-4 order-xl-1">
 								<div class="mb-3">
 									<?php  get_template_part( 'partial-templates/image', null, array( 'tab' => true ) ); ?>
 								</div>
 							</div>
-							<div class="col-lg-8">
-								<div class="ps-lg-4">
+							<div class="col-xl-8">
+								<div class="ps-xl-4">
 									
 									<?php  get_template_part( 'partial-templates/heading' ); ?>
 									
