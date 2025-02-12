@@ -16323,6 +16323,10 @@ html body.logged-in.admin-bar .navbar.navbar-reveal.affix {
   }
 }
 
+[class*=col-].acf-block-component {
+  width: 100% !important;
+}
+
 /*
 .row.block-editor-block-list__layout{
 	>.is-style-col-lg-12{
@@ -18224,6 +18228,14 @@ body .facetwp-flyout {
   position: relative;
   color: #fff;
   background-color: #2f2f2f;
+}
+.footer a {
+  color: #fff;
+  -webkit-text-decoration: underline dotted 1px rgba(255, 255, 255, 0.5);
+  text-decoration: underline dotted 1px rgba(255, 255, 255, 0.5);
+}
+.footer a:hover, .footer .post-item a:hover a.btn, .post-item a:hover .footer a.btn, .footer .post-item a:hover .woocommerce-notices-wrapper .woocommerce-message a.button, .post-item a:hover .woocommerce-notices-wrapper .woocommerce-message .footer a.button, .footer .woocommerce-notices-wrapper .woocommerce-message .post-item a:hover a.button, .woocommerce-notices-wrapper .woocommerce-message .post-item a:hover .footer a.button, .footer .post-item a:hover .woocommerce-info a.button, .post-item a:hover .woocommerce-info .footer a.button, .footer .woocommerce-info .post-item a:hover a.button, .woocommerce-info .post-item a:hover .footer a.button {
+  text-decoration-color: #38B085;
 }
 .footer .footer-inner > .container {
   position: relative;

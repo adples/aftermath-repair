@@ -3,6 +3,15 @@
 	color: $white;
 	background-color: $secondary;
 	
+	a{
+		color: $white;
+		text-decoration: underline dotted 1px rgba($white, .5);
+		
+		&:hover{
+			text-decoration-color: $primary;
+		}
+	}
+	
 	.footer-inner{
 		
 		>.container{
