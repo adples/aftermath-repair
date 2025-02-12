@@ -56,7 +56,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 							<?php endif; ?>
 							
 							<?php if( have_rows('states','option') ): ?>
-								<h6 class="mb-3">We also serve several areas within <a href="<?php echo esc_url(get_permalink(550); ?>">Louisiana</a> including:</h6>
+								<h6 class="mb-3">We also serve several areas within <a href="<?php echo esc_url(get_permalink(550)); ?>">Louisiana</a> including:</h6>
 								<ul class="footer-list-inline">
 									<?php while( have_rows('states','option') ): the_row(); ?>
 										<?php if( get_sub_field('state') ): ?>
