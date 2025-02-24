@@ -16930,12 +16930,6 @@ body a {
     padding-bottom: 22.5%;
   }
 }
-@media (min-width: 1560px) {
-  .banner.banner-interior .banner-img {
-    padding-bottom: 20%;
-  }
-}
-
 .breadcrumb-wrapper {
   padding: 0.5rem 1rem;
   background-color: #38B085;
@@ -17320,7 +17314,7 @@ body a {
 }
 .team-members .team-member:hover img, .team-members .post-item a:hover .team-member.btn img, .team-members .post-item a:hover .wpcf7 input.team-member[type=submit] img, .wpcf7 .team-members .post-item a:hover input.team-member[type=submit] img, .post-item a:hover .team-members .team-member.btn img, .post-item a:hover .team-members .wpcf7 input.team-member[type=submit] img, .wpcf7 .post-item a:hover .team-members input.team-member[type=submit] img, .team-members .post-item a:hover .woocommerce-notices-wrapper .woocommerce-message a.team-member.button img, .post-item a:hover .woocommerce-notices-wrapper .woocommerce-message .team-members a.team-member.button img, .team-members .woocommerce-notices-wrapper .woocommerce-message .post-item a:hover a.team-member.button img, .woocommerce-notices-wrapper .woocommerce-message .post-item a:hover .team-members a.team-member.button img, .team-members .post-item a:hover .woocommerce-info a.team-member.button img, .post-item a:hover .woocommerce-info .team-members a.team-member.button img, .team-members .woocommerce-info .post-item a:hover a.team-member.button img, .woocommerce-info .post-item a:hover .team-members a.team-member.button img {
   transform: scale3d(1.1, 1.1, 1);
-  filter: grayscale(50%);
+  filter: grayscale(100%);
 }
 .team-members .team-member:hover span, .team-members .post-item a:hover .team-member.btn span, .team-members .post-item a:hover .wpcf7 input.team-member[type=submit] span, .wpcf7 .team-members .post-item a:hover input.team-member[type=submit] span, .post-item a:hover .team-members .team-member.btn span, .post-item a:hover .team-members .wpcf7 input.team-member[type=submit] span, .wpcf7 .post-item a:hover .team-members input.team-member[type=submit] span, .team-members .post-item a:hover .woocommerce-notices-wrapper .woocommerce-message a.team-member.button span, .post-item a:hover .woocommerce-notices-wrapper .woocommerce-message .team-members a.team-member.button span, .team-members .woocommerce-notices-wrapper .woocommerce-message .post-item a:hover a.team-member.button span, .woocommerce-notices-wrapper .woocommerce-message .post-item a:hover .team-members a.team-member.button span, .team-members .post-item a:hover .woocommerce-info a.team-member.button span, .post-item a:hover .woocommerce-info .team-members a.team-member.button span, .team-members .woocommerce-info .post-item a:hover a.team-member.button span, .woocommerce-info .post-item a:hover .team-members a.team-member.button span {
   bottom: 0;
