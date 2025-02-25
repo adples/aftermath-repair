@@ -97,7 +97,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 			
 			<div class="text-center">
 			<?php
-			// Display the pagination component.
+			// Display the pagination component
 			understrap_pagination();
 
 			// Do the right sidebar check and close div#primary.
