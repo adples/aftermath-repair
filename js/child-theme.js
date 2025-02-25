@@ -6980,8 +6980,24 @@
 	  });
 	});
 	jQuery(function ($) {
+	  $('.page-id-18 .service-list a').on("click", function (e) {
+	    e.preventDefault();
+	    removeHash();
+	    var url = new URL($(this).attr('href'), window.location.href);
+	    var hash = url.hash;
+
+	    //location.hash = hash;
+
+	    $(hash).tab('show');
+	    $('html, body').animate({
+	      scrollTop: $('#service-section').offset().top - 150
+	    }, 1000);
+
+	    //alert(url);
+	  });
 	  if (window.location.hash.startsWith("#tabs")) {
 	    const hash = window.location.hash;
+	    removeHash();
 	    $(hash).tab('show');
 	    $('html, body').animate({
 	      scrollTop: $('#service-section').offset().top - 150
@@ -7002,6 +7018,9 @@
 	    });
 	  }
 	});
+	function removeHash() {
+	  history.pushState("", document.title, window.location.pathname + window.location.search);
+	}
 
 	exports.Alert = alert;
 	exports.Button = button;

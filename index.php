@@ -28,6 +28,8 @@ $container = get_theme_mod( 'understrap_container_type' );
 	<div class="<?php echo esc_attr( $container ); ?>" id="content" tabindex="-1">
 		
 		<div class="banner banner-interior">
+			
+				<?php the_content(); ?>
 				
 				<div class="banner-img resize">
 				</div>

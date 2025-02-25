@@ -73,7 +73,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 							<?php
 							wp_nav_menu( array(
 								'menu' => '4',
-								'menu_class' => 'footer-list'
+								'menu_class' => 'footer-list service-list'
 							));
 							?>
 							
