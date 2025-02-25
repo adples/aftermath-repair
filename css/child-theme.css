@@ -17174,6 +17174,11 @@ body a {
   font-size: 1rem;
 }
 
+.service-section-wrapper > .wp-block-columns:not(:last-child) {
+  padding-bottom: 1.5rem;
+  border-bottom: solid 1px rgba(94, 87, 94, 0.15);
+}
+
 .wp-block-separator {
   border-top: solid 1px;
   margin: 2rem 0;
