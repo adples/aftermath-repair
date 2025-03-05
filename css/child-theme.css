@@ -16693,7 +16693,11 @@ body a {
   background-size: contain;
   background-repeat: no-repeat;
   background-position: bottom right;
-  background-image: url("http://robm288.sg-host.com/wp-content/uploads/2025/01/concrete-a.jpg");
+}
+@media (min-width: 992px) {
+  .banner.banner-home {
+    background-image: url("http://robm288.sg-host.com/wp-content/uploads/2025/01/concrete-a.jpg");
+  }
 }
 .banner.banner-home > .container {
   padding-bottom: 3rem;
@@ -18068,6 +18072,14 @@ body .facetwp-flyout {
 
 .bg-secondary {
   background-color: #2f2f2f;
+}
+
+@media (max-width: 991.98px) {
+  .bg-concrete {
+    background-image: url("https://www.transparenttextures.com/patterns/grunge-wall.png") !important;
+    background-size: auto !important;
+    background-repeat: repeat !important;
+  }
 }
 
 .bg-gray {
