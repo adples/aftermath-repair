@@ -232,16 +232,13 @@
 }
 
 .bg-concrete{
-	//background-image: url("https://www.transparenttextures.com/patterns/grunge-wall.png");
-	@include media-breakpoint-down(lg){
-		//background-image: url("https://www.transparenttextures.com/patterns/concrete-wall.png")!important;
-		background-image: url("https://www.transparenttextures.com/patterns/grunge-wall.png")!important;
-		background-size: auto!important;
-		background-repeat: repeat!important;
-		
-		&:after{
-			//background-color: rgba(100, 100, 100, 0.05)!important;
-		}
+	background-image:url("/wp-content/uploads/2025/03/grunge-wall.webp");
+	background-repeat: repeat;
+	
+	@include media-breakpoint-up(lg){
+		background-image:url("/wp-content/uploads/2025/01/concrete-bg.jpg");
+		background-size: cover;
+		background-repeat: no-repeat;
 	}
 }
 
