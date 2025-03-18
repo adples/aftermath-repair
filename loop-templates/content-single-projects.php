@@ -129,11 +129,10 @@ if ( isset($project_location) && $project_location !== false) {
 					<?php endforeach; ?>
 				<?php endif; ?>
 				
-				<?php if (get_field('desc')): ?>
-					<div class="mt-3 mt-xl-4">
-						<?php echo get_field('desc') ?>
-					</div>
-				<?php endif ?>
+				
+				<div class="mt-3 mt-xl-4">
+					<?php echo get_field('desc') ?>
+				</div>
 				
 				<?php if( have_rows('carousel') ): ?>
 					<?php while( have_rows('carousel') ): the_row(); ?>
