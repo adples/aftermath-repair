@@ -16541,6 +16541,9 @@ html body.logged-in.admin-bar .navbar.navbar-reveal.affix {
     padding: 0.4rem 1.25rem;
   }
 }
+.navbar .nav-item.current-menu-item > a {
+  color: #38B085;
+}
 @media (min-width: 992px) {
   .navbar .nav-item:first-child {
     margin-left: auto;
@@ -16595,6 +16598,10 @@ html body.logged-in.admin-bar .navbar.navbar-reveal.affix {
     font-size: 1rem;
   }
 }
+.single-projects .nav-item.menu-item-62 > a {
+  color: #38B085;
+}
+
 body {
   font-family: "Cabin", serif;
   font-optical-sizing: auto;

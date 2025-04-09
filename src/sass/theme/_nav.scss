@@ -182,6 +182,12 @@
 			}
 		}
 		
+		&.current-menu-item{
+			>a{
+				color: $primary;
+			}
+		}
+		
 		&:first-child{
 			@include media-breakpoint-up(lg){
 				margin-left: auto;
@@ -253,5 +259,11 @@
 			}
 			
 		}
+	}
+}
+
+.single-projects{
+	.nav-item.menu-item-62>a{
+		color: $primary;
 	}
 }
