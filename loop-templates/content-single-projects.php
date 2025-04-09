@@ -164,7 +164,7 @@ if ( isset($project_location) && $project_location !== false) {
 	
 	<pre><?php //echo var_dump($prev_post)?></pre>
 	
-	<div class="row justify-content-center">
+	<div class="row justify-content-center mt-4 mt-xl-5">
 		<div class="col-md-10 col-xl-8">
 			<div class="d-flex justify-content-center">
 				<?php if ($prev_post): ?>
