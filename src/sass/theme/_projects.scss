@@ -195,6 +195,37 @@
 	}
 }
 
+.adjacent-project{
+	text-decoration: none;
+	color: $secondary;
+	
+	i{
+		position:relative;
+		color:$primary;
+		transition: all ease-in-out .3s;
+		left: 0;
+	}
+	
+	&:hover{
+		i{
+			left: 4px;
+		}
+		
+		h5{
+			color: $secondary;
+		}
+	}
+	
+	&.prev{
+		&:hover{
+			i{
+				left: -4px;
+				right: auto;
+			}
+		}
+	}
+}
+
 body .facetwp-flyout {
 	right: 0;
 	transform: translateX(100%);

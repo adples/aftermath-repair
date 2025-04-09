@@ -18,7 +18,7 @@ if ( ! empty( $block['className'] ) ) {
 $the_query = new WP_Query( array(
 	'post_type' => 'projects',
 	'posts_per_page' => 100, 
-	'orderby' => 'title', 
+	//'orderby' => 'title', 
 	'order' => 'ASC',
 	"facetwp" => true 
 ) );

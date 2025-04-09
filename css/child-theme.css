@@ -17772,6 +17772,27 @@ div > .step:not(:last-child) {
   -webkit-transform: rotate(90deg);
 }
 
+.adjacent-project {
+  text-decoration: none;
+  color: #2f2f2f;
+}
+.adjacent-project i {
+  position: relative;
+  color: #38B085;
+  transition: all ease-in-out 0.3s;
+  left: 0;
+}
+.adjacent-project:hover i, .post-item a:hover .adjacent-project.btn i, .post-item a:hover .wpcf7 input.adjacent-project[type=submit] i, .wpcf7 .post-item a:hover input.adjacent-project[type=submit] i, .post-item a:hover .woocommerce-notices-wrapper .woocommerce-message a.adjacent-project.button i, .woocommerce-notices-wrapper .woocommerce-message .post-item a:hover a.adjacent-project.button i, .post-item a:hover .woocommerce-info a.adjacent-project.button i, .woocommerce-info .post-item a:hover a.adjacent-project.button i {
+  left: 4px;
+}
+.adjacent-project:hover h5, .post-item a:hover .adjacent-project.btn h5, .post-item a:hover .wpcf7 input.adjacent-project[type=submit] h5, .wpcf7 .post-item a:hover input.adjacent-project[type=submit] h5, .post-item a:hover .woocommerce-notices-wrapper .woocommerce-message a.adjacent-project.button h5, .woocommerce-notices-wrapper .woocommerce-message .post-item a:hover a.adjacent-project.button h5, .post-item a:hover .woocommerce-info a.adjacent-project.button h5, .woocommerce-info .post-item a:hover a.adjacent-project.button h5, .adjacent-project:hover .h5, .post-item a:hover .adjacent-project.btn .h5, .post-item a:hover .wpcf7 input.adjacent-project[type=submit] .h5, .wpcf7 .post-item a:hover input.adjacent-project[type=submit] .h5, .post-item a:hover .woocommerce-notices-wrapper .woocommerce-message a.adjacent-project.button .h5, .woocommerce-notices-wrapper .woocommerce-message .post-item a:hover a.adjacent-project.button .h5, .post-item a:hover .woocommerce-info a.adjacent-project.button .h5, .woocommerce-info .post-item a:hover a.adjacent-project.button .h5 {
+  color: #2f2f2f;
+}
+.adjacent-project.prev:hover i, .post-item a:hover .adjacent-project.prev.btn i, .post-item a:hover .wpcf7 input.adjacent-project.prev[type=submit] i, .wpcf7 .post-item a:hover input.adjacent-project.prev[type=submit] i, .post-item a:hover .woocommerce-notices-wrapper .woocommerce-message a.adjacent-project.prev.button i, .woocommerce-notices-wrapper .woocommerce-message .post-item a:hover a.adjacent-project.prev.button i, .post-item a:hover .woocommerce-info a.adjacent-project.prev.button i, .woocommerce-info .post-item a:hover a.adjacent-project.prev.button i {
+  left: -4px;
+  right: auto;
+}
+
 body .facetwp-flyout {
   right: 0;
   transform: translateX(100%);
