@@ -164,23 +164,19 @@ if ( isset($project_location) && $project_location !== false) {
 	
 	<pre><?php //echo var_dump($prev_post)?></pre>
 	
-	<div class="row justify-content-center mt-4 mt-xl-5">
-		<div class="col-md-10 col-xl-8">
-			<div class="d-flex justify-content-center">
-				<?php if ($prev_post): ?>
-					<a href="<?php echo esc_url(get_permalink( $prev_post->ID ))?>" class="adjacent-project prev text-end px-4 px-xxl-5">
-						<span>Prev Project</span>
-						<h5 class="h4"><i class="fa fa-angle-double-left"></i>&nbsp;&nbsp;<?php echo $prev_post->post_title ?></h5>
-					</a>
-				<?php endif; ?>
-				<?php if ($next_post): ?>
-					<a href="<?php echo esc_url(get_permalink( $next_post->ID ))?>" class="adjacent-project text-start px-4 px-xxl-5">
-						<span>Next Project</span>
-						<h5 class="h4"><?php echo $next_post->post_title ?>&nbsp;&nbsp;<i class="fa fa-angle-double-right"></i></h5>
-					</a>
-				<?php endif; ?>
-			</div>
-		</div>
+	<div class="d-flex justify-content-between mt-4 mt-xxl-5">
+		<?php if ($prev_post): ?>
+			<a href="<?php echo esc_url(get_permalink( $prev_post->ID ))?>" class="adjacent-project prev text-end pe-4 pe-xxl-5">
+				<span>Prev Project</span>
+				<h5 class="h4"><i class="fa fa-angle-double-left"></i>&nbsp;&nbsp;<?php echo $prev_post->post_title ?></h5>
+			</a>
+		<?php endif; ?>
+		<?php if ($next_post): ?>
+			<a href="<?php echo esc_url(get_permalink( $next_post->ID ))?>" class="adjacent-project text-start ps-4 ps-xxl-5">
+				<span>Next Project</span>
+				<h5 class="h4"><?php echo $next_post->post_title ?>&nbsp;&nbsp;<i class="fa fa-angle-double-right"></i></h5>
+			</a>
+		<?php endif; ?>
 	</div>
 
 </div>
