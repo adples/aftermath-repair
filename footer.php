@@ -137,7 +137,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 			</a>
 		</div>
 	</div>
-</div><!-- #wrapper-footer -->
+</div><!-- #wrapper-footer. -->
 
 <?php // Closing div#page from header.php. ?>
 </div><!-- #page -->
